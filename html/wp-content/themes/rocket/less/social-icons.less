@@ -1,0 +1,75 @@
+/*
+// 14. Social Icons
+// --------------------------------------------------
+*/
+.social-icons {
+	.list-unstyled();
+	padding: 0;
+
+	> li {
+		padding: 0;
+		margin: 0;
+
+		> a {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			background: @theme-color1;
+			color: #fff;
+			line-height: 50px;
+			text-align: center;
+			.transition(.15s);
+
+			&:hover {
+				background: lighten(@theme-color1, 5%);
+			}
+		}
+	}
+
+	// Rounded
+	&.social-icons__rounded {
+
+		> li {
+			display: inline;
+
+			> a {
+				width: 42px;
+				height: 42px;
+				line-height: 38px;
+				background: none;
+				border-radius: 50%;
+				margin: 0 3px;
+
+				@media (min-width:@screen-sm-min) {
+					width: 32px;
+					height: 32px;
+					line-height: 28px;
+					margin: 0 1px;
+				}
+
+				@media (min-width:@screen-md-min) {
+					margin: 0 3px;
+				}
+			}
+		}
+	}
+
+	// Outline
+	&.social-icons__outline {
+
+		> li {
+
+			> a {
+				background-color: none;
+				border: 2px solid @theme-color2;
+				color: @theme-color2;
+
+				&:hover {
+					border-color: @theme-color1;
+					background-color: @theme-color1;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

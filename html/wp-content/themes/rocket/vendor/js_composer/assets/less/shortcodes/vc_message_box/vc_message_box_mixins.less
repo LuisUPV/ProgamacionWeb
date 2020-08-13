@@ -1,0 +1,25 @@
+//====== MIXINS
+
+// Creating Colors
+.vc-make-message-color(@text; @icon: @text; @border: false; @background: false) {
+  color: @text;
+  & when not (@border = false) {
+    border-color: @border;
+  }
+  & when not (@background = false) {
+    background-color: @background;
+  }
+  .vc_message_box-icon {
+    color: @icon;
+  }
+}
+
+// make colors set
+.vc-message-make-colors-set(@selector; @text; @icon; @border; @background; @contrast-color) {
+  &.@{selector} {
+    // Standard, Classic (Old style), 3d
+    &.vc_message_box {
+      .vc-make-message-color(@text; @icon; @border: @border; @background: @background);
+    }
+  }
+}

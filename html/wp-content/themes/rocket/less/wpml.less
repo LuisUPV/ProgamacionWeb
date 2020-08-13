@@ -1,0 +1,138 @@
+/*
+// 42. WPML
+// --------------------------------------------------
+*/
+
+// Language selector
+.h-top-bar #lang_sel {
+	height: auto;
+	vertical-align: middle;
+	max-width: 12em;
+
+	ul {
+
+		a,
+		a.lang_sel_sel {
+			color: @top-bar-link-color;
+			font-size: 14px;
+
+			@media (max-width: @screen-md-max) {
+				font-size: 12px;
+			}
+		}
+
+		a:hover ul, li:hover ul {
+			// display: block;
+		}
+
+		a.lang_sel_sel {
+			background: none;
+
+			&:after {
+				content:"";
+				display: block;
+				position: absolute;
+				z-index: 1;
+				right: 0;
+				top: 0;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				border: 2px solid @theme-color15;
+			}
+			&:before {
+				content:"";
+				display: block;
+				position: absolute;
+				z-index: 2;
+				right: 8px;
+				top: 10px;
+				width: 0;
+				height: 0;
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+				border-top: 4px solid @theme-color1;
+			}
+
+			&:hover {
+
+
+			}
+
+			> .icl_lang_sel_current:before {
+				.fa-icon-before();
+				content:"\f0ac";
+				display: inline-block;
+				margin-right: 10px;
+				color: @theme-color1;
+			}
+		}
+
+		li {
+			width: auto;
+			float: none;
+			position: relative;
+
+			&:before {
+				display: none;
+			}
+
+			ul {
+				width: auto;
+				background: #fff;
+				top: 28px;
+				// display: none;
+				.box-shadow(0 3px 12px 0 rgba(0,0,0,0.15));
+				z-index: 999;
+
+				&:before {
+					content:"";
+					display: block;
+					position: absolute;
+					right: 4px;
+					top: -8px;
+					border-left: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-bottom: 8px solid #fff;
+				}
+
+				a {
+					line-height: 1.5em;
+					padding: 10px 12px;
+					text-align: left;
+
+					&:link,
+					&:visited {
+						background: @theme-color12;
+					}
+
+					&:hover {
+						background:@theme-color12;
+						color: @theme-color1;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+.h-top-bar #lang_sel a:hover,
+.h-top-bar #lang_sel a.lang_sel_sel:hover{
+	color: @top-bar-link-color-hover;
+}
+
+.h-top-bar #lang_sel li ul a,
+.h-top-bar #lang_sel li ul a:visited{
+	color:@theme-color6;
+}
+
+.h-top-bar #lang_sel a,
+.h-top-bar #lang_sel a:visited{
+	border: none;
+}
+
+.h-top-bar #lang_sel ul ul{
+	border: none;
+}

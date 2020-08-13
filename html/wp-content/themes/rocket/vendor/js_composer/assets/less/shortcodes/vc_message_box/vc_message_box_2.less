@@ -1,0 +1,75 @@
+//====== STYLES
+
+/* ================================
+ * Message box
+ * ================================ */
+.vc_message_box {
+  border-left: 6px solid transparent;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 @vc_margin_bottom_gold 0;
+  padding: @message-box-vertical-padding @message-box-horizontal-padding @message-box-vertical-padding @message-box-icon-indent;
+  position: relative;
+  font-size: @message-box-font-size-base;
+  .box-sizing(border-box);
+  > p {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.vc_message_box-icon {
+  bottom: 0;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: @message-box-icon-indent;
+  > * {
+    font-size: @message-box-icon-size;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    .translate(-50%; -50%);
+  }
+  // FontAwesome default icon size fix
+  > .fa {
+    font-size: @message-box-icon-size;
+    line-height: 1;
+  }
+}
+
+// Generating message types
+//------------------
+// info
+.vc-message-make-colors-set(~'vc_color-info'; @alert-info-text; @alert-info; @alert-info-border; @alert-info-bg; @alert-info-contrast);
+// success
+.vc-message-make-colors-set(~'vc_color-success'; @alert-success-text; @alert-success; @alert-success-border; @alert-success-bg; @alert-success-contrast);
+// warning
+.vc-message-make-colors-set(~'vc_color-warning'; @alert-warning-text; @alert-warning; @alert-warning-border; @alert-warning-bg; @alert-warning-contrast);
+// danger
+.vc-message-make-colors-set(~'vc_color-danger'; @alert-danger-text; @alert-danger; @alert-danger-border; @alert-danger-bg; @alert-danger-contrast);
+
+
+// Creating Designs
+//------------------
+// Standard
+.vc_message_box-standard {
+
+}
+
+// Creating Shapes
+//------------------
+// Square
+.vc_message_box-square {
+
+}

@@ -1,0 +1,84 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+  .clearfix();
+}
+.center-block {
+  .center-block();
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  .text-hide();
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+
+
+
+// Temp for Woocommerce
+// -------------------------
+.woocommerce-checkout #payment div.payment_box {
+  color: #fff !important;
+}
+.payment_method_paypal label {
+  display: inline;
+}
+
+.woocommerce div.product form.cart .quantity,
+.single_add_to_cart_button {
+  vertical-align: middle;
+}
+.woocommerce div.product form.cart .quantity {
+  position: relative;
+  top: -3px;
+}
+
+// For Affix plugin
+// -------------------------
+
+.relative-zindex1 {
+	position: relative;
+	z-index: 1;
+}

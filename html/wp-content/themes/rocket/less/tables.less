@@ -1,0 +1,231 @@
+/*
+// 3. Tables
+// --------------------------------------------------
+*/
+
+/* 3.1. Base table styles */
+// -------------------------
+
+table {
+  background-color: @table-bg;
+}
+caption {
+  padding-top: @table-cell-padding;
+  padding-bottom: @table-cell-padding;
+  color: @text-muted;
+  text-align: left;
+}
+th {
+  text-align: left;
+  background: @table-bg-active;
+  font-size: @font-size-h5;
+  font-family: @headings-font-family;
+  text-transform: uppercase;
+  color: @headings-color;
+}
+
+
+// Baseline styles
+
+table,
+.table {
+  margin-bottom: @line-height-computed;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-cell-padding;
+        line-height: @line-height-base;
+        border-top: 1px solid @table-border-color;
+        font-size: @font-size-h5;
+        color: @headings-color;
+        font-family: @headings-font-family;
+        font-weight: 400;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {;
+    border-bottom: 1px solid @table-border-color;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-weight: 700;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid @table-border-color;
+  }
+
+  // Nesting
+  .table {
+    background-color: @body-bg;
+  }
+}
+
+
+
+/* 3.2. Condensed table */
+// -------------------------
+//
+// Condensed table w/ half padding
+
+.table-condensed {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: @table-condensed-cell-padding;
+      }
+    }
+  }
+}
+
+
+/* 3.3. Bordered table */
+// -------------------------
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+  border: 1px solid @table-border-color;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: 1px solid @table-border-color;
+        border-bottom-style: dashed;
+        border-top-style: dashed;
+      }
+    }
+  }
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 1px;
+    }
+
+    &:first-child {
+    	> th,
+	  	> td {
+	  		border-bottom-style: solid;
+	  	}
+    }
+  }
+}
+
+.table-bordered__solid {
+	> thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border-bottom-style: solid;
+        border-top-style: solid;
+      }
+    }
+  }
+}
+
+
+
+/* 3.4. Zebra-striping */
+// -------------------------
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  > tbody > tr:nth-of-type(even) {
+    background-color: @table-bg-accent;
+  }
+}
+
+
+
+/* 3.5. Striped Vertical */
+// -------------------------
+// 
+// The same as zebra-striping but vertical
+
+.table-striped-vertical {
+  > thead > tr > th:nth-child(odd) {
+    background-color: darken(@table-bg-hover, 2%);
+  }
+  > tbody > tr > td:nth-child(odd) {
+    background-color: @table-bg-accent;
+  }
+}
+
+
+
+/* 3.6. Hover effect */
+// -------------------------
+//
+// Placed here since it has to come after the potential zebra striping
+
+.table-hover {
+  > tbody > tr:hover > td {
+    background-color: @table-bg-hover;
+  }
+}
+
+
+.table-responsive {
+  @media screen and (max-width: @screen-xs-max) {
+    border: 1px solid @table-border-color;
+  }
+}
+
+
+
+/* 3.7. Table Small */
+// -------------------------
+//
+// Small Table
+
+.table-small {
+	
+	> thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+      	font-family: @font-family-base;
+      	padding-top: 18px;
+      	padding-bottom: 18px;
+      }
+    }
+  }
+  > thead > tr {
+    > th,
+    > td {
+    	font-size: 15px;
+    	font-weight: 400;
+    }
+  }
+
+  > tbody > tr {
+    > td {
+    	font-size: 14px;
+    }
+  }
+}

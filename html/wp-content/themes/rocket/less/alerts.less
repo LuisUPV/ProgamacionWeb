@@ -1,0 +1,116 @@
+/*
+// 17. Alerts
+// --------------------------------------------------
+*/
+
+/* 17.1. Base */
+// -------------------------
+
+.alert,
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info,
+div.wpcf7-response-output {
+	position: relative;
+	padding: @alert-padding (@alert-padding + 8);
+  margin-bottom: @line-height-computed;
+  border: none;
+  border-left: 6px solid transparent;
+  border-radius: @alert-border-radius;
+  font-size: 16px;
+  min-height: 50px;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  font-family: @font-family-alt;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: inherit;
+	}
+
+	h5 {
+		padding-top: 0;
+		margin-bottom: .5em;
+	}
+
+	ul > li {
+
+		&:before {
+			color: inherit;
+		}
+	}
+
+	&.text-uppercase {
+		text-transform: uppercase;
+	}
+
+  a {
+    color: #fff;
+  }
+}
+
+
+
+/* 17.2. Dismissible alerts */
+// -------------------------
+
+.alert-dismissible {
+  padding-right: (@alert-padding + 50);
+  text-transform: uppercase;
+
+  // Adjust close link position
+  .close {
+  	background: rgba(255,255,255,.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: inherit;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    .transition(.2s);
+    opacity:1;
+
+    &:hover {
+    	background: rgba(255,255,255,.15);
+    }
+  }
+}
+
+
+
+/* 17.3. Alternate styles */
+// -------------------------
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-success,
+.woocommerce-message,
+div.wpcf7-mail-sent-ok {
+  .alert-variant(@alert-success-bg; @alert-success-border; @alert-success-text);
+}
+
+.alert-info,
+.woocommerce-info {
+  .alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
+}
+
+.alert-warning,
+div.wpcf7-spam-blocked {
+  .alert-variant(@alert-warning-bg; @alert-warning-border; @alert-warning-text);
+}
+
+.alert-danger,
+.woocommerce-error,
+div.wpcf7-validation-errors,
+div.wpcf7-mail-sent-ng {
+  .alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+}

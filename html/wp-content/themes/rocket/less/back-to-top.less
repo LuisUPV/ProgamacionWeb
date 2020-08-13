@@ -1,0 +1,94 @@
+/*
+// 39. Back To Top
+// --------------------------------------------------
+*/
+.back-top {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+	display: none;
+	.backface-visibility(hidden);
+
+	@media (min-width: @screen-md-min) {
+		bottom: 30px;
+		right: 30px;
+	}
+
+	@media (max-width:@screen-xs-max) {
+		bottom: 0;
+		right: 0;
+	}
+
+	.link-holder {
+		width: 100px;
+		height: 100px;
+		position: relative;
+
+		@media (max-width:@screen-xs-max) {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	a {
+		width: 56px;
+		height: 56px;
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		.translate3d(-50%;-50%; 0);
+		border-radius: 50%;
+		border: 4px solid #e5e2e0;
+		text-align: center;
+		text-decoration: none;
+		color: #e5e2e0;
+		font-size: 24px;
+		.transition(.2s);
+
+		@media (max-width:@screen-xs-max) {
+			width: 30px;
+			height: 30px;
+			border-width: 3px;
+			font-size: 14px;
+		}
+
+		&:hover {
+			width: 100px;
+			height: 100px;
+			background: @theme-color1;
+			color: #fff;
+
+			@media (max-width:@screen-xs-max) {
+				width: 50px;
+				height: 50px;
+			}
+
+			.fa {
+				font-size: 28px;
+
+				@media (max-width:@screen-xs-max) {
+					font-size: 14px;
+				}
+			}
+		}
+
+		.fa {
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			.translate3d(-50%;-50%; 0);
+			.transition(.1s);
+		}
+
+		&.contacts-link + .tooltip {
+			margin: 0 0 0 -30px;
+
+			@media (max-width:@screen-xs-max) {
+				display: none !important;
+			}
+		}
+	}
+}

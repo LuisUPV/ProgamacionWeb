@@ -1,0 +1,84 @@
+/*
+// 31. Revolution Slider (Custom styles)
+// --------------------------------------------------
+*/
+
+.tp-banner-holder {
+	position: relative;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+
+	@media(max-width:@screen-sm-max) {
+		padding-top: 20px;
+	}
+
+	@media(min-width:@screen-sm-min) {
+		padding-bottom: 86px;
+	}
+
+	iframe {
+		border: none !important;
+	}
+}
+
+.tp-banner ul {
+	padding: 0 !important;
+}
+
+.tp-banner {
+
+	.btn-has-icon {
+
+		.fa {
+			text-align: center !important;
+		}
+	
+		@media (max-width: 479px) {
+			padding-left: 35px;
+	
+			.fa {
+				display: none;
+			}
+	
+			&.icon-right {
+				padding-right: 35px;
+			}
+		}
+	}
+}
+
+.alert-no-slider {
+	margin: 60px 0;
+}
+
+.Rocket-OR-Text {
+	text-align: center !important;
+	height: 50px !important;
+	width: 50px !important;
+}
+
+
+// Slider arrows 1px issue
+.rocket-nav.tparrows.tp-rightarrow:before {
+	margin-left: 0 !important;
+}
+
+
+// Font Awesome 5 compatibility fix
+rs-module [class^="fa-"]::before,
+rs-module [class*=" fa-"]::before,
+.rb-modal-wrapper [class^="fa-"]::before,
+.rb-modal-wrapper [class*=" fa-"]::before,
+#rs_overview [class^="fa-"]::before,
+#rs_overview [class*=" fa-"]::before,
+#objectlibrary [class^="fa-"]::before,
+#objectlibrary [class*=" fa-"]::before,
+#waitaminute [class^="fa-"]::before,
+#waitaminute [class*=" fa-"]::before,
+#rs_overview_menu [class^="fa-"]::before,
+#rs_overview_menu [class*=" fa-"]::before,
+#builderView [class^="fa-"]::before,
+#builderView [class*=" fa-"]::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 700;
+}

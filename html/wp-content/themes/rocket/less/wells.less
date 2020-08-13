@@ -1,0 +1,40 @@
+/*
+// 20. Wells
+// --------------------------------------------------
+*/
+
+
+/* 20.1. Base class */
+// -------------------------
+
+.well {
+  min-height: 40px;
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: @well-bg;
+  border: 1px solid @well-border;
+  border-radius: @border-radius-base;
+  font-weight: bold;
+  .box-shadow(none);
+
+  a {
+  	border-bottom: 1px dotted @theme-color1;
+
+  	&:hover {
+  		text-decoration: none;
+  	}
+  }
+}
+
+
+/* 20.2. Sizes */
+// -------------------------
+
+.well-lg {
+  padding: 40px;
+  border-radius: @border-radius-large;
+}
+.well-sm {
+  padding: 15px;
+  border-radius: @border-radius-small;
+}

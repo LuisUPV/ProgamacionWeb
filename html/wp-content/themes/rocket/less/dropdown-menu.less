@@ -1,0 +1,48 @@
+/*
+// 16. Dropdown menus
+// --------------------------------------------------
+*/
+
+.dropdown-menu {
+	padding: 0;
+  margin: 0; // override default ul
+  font-size: @font-size-base;
+  background-color: @dropdown-bg;
+  border: 1px solid @dropdown-fallback-border; // IE8 fallback
+  border: 1px solid @dropdown-border;
+  border-radius: @border-radius-base;
+  .box-shadow(none);
+
+  > li {
+  	padding-bottom: 0;
+  	border-top: 1px solid @input-border;
+
+  	&:first-child {
+  		border-top: none;
+  	}
+
+  	> a {
+			padding: 17px 20px;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: @line-height-base;
+			color: @dropdown-link-color;
+  	}
+  }
+}
+
+.dropdown-menu > li > a {
+	&:hover,
+	&:focus {
+		color: @dropdown-link-hover-color;
+		background-color: @dropdown-link-hover-bg;
+	}
+}
+
+.btn-group.open .dropdown-toggle {
+  .box-shadow(none);
+
+  .caret {
+  	background: @theme-color12;
+  }
+}

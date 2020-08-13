@@ -1,0 +1,429 @@
+/*
+// 7. Breadcrumb
+// --------------------------------------------------
+*/
+
+/* 7.1. Page Title */
+// -------------------------
+
+.section-title-wrapper {
+	text-align: center;
+	position: relative;
+	margin-bottom: 2em;
+
+	@media (min-width: @screen-sm-min) {
+		margin-bottom: 4em;
+	}
+
+	@media (min-width: @screen-md-min) {
+		margin-bottom: 6em;
+	}
+
+	&.section-title-wrapper__sm {
+		margin-bottom: 3em;
+	}
+
+	&.section-title-wrapper__no-bottom-margin {
+		margin-bottom: 0 !important;
+	}
+
+	.section-title-dots {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+
+		span {
+			width: 5px;
+			height: 5px;
+			display: inline-block;
+			overflow: hidden;
+			background: @theme-color1;
+			border-radius: 50%;
+			margin: 0 4px;
+			vertical-align: bottom;
+		}
+	}
+}
+.section-title-inner {
+	position: relative;
+
+	// Add additional padding for Section Title in Content (VC shortcode)
+	&.section-title-inner__alt {
+		padding-bottom: 12px;
+	}
+}
+
+.section-title,
+.page-title .section-title {
+	position: relative;
+	z-index: 2;
+	font-size: @font-size-h4;
+	text-align: center;
+	color: @theme-color2;
+	font-family: @font-family-sans-serif;
+	font-weight: 700;
+	margin-bottom: .2em;
+
+	@media (min-width: @screen-sm-min) {
+		font-size: @font-size-h2;
+	}
+	@media (min-width: @screen-md-min) {
+		font-size: @font-size-h1;
+	}
+
+	&.section-title__lg {
+
+		@media (max-width: @screen-sm-max) {
+			font-size: @font-size-h2 !important;
+		}
+
+		@media (max-width: @screen-xs-max) {
+			font-size: @font-size-h4 !important;
+		}
+
+		@media (min-width: @screen-md-min) {
+			font-size: @font-size-h1 * 1.217391; // 56px (overrided by Theme Options)
+		}
+	}
+}
+
+// Overflow Title
+.page-title_overflow,
+.page-title_overflow .section-title {
+	.text-overflow();
+}
+
+// Page Title Overlay
+.section-title-overlay {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.section-desc {
+	position: relative;
+	z-index: 2;
+	display: block;
+	padding-bottom: 30px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: @font-family-alt;
+	font-weight: 300;
+	color: @theme-color2;
+
+	> a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+// Page Title
+.page-title {
+	padding: 30px 0 0 0;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 60px 0 0 0;
+	}
+
+	@media (min-width: @screen-md-min) {
+		padding: 120px 0 0 0;
+	}
+}
+
+// Page Title Layouts
+.page-title.page-title-layout__both-centered {
+
+	.section-title {
+		text-align: center;
+	}
+	.section-desc {
+		text-align: center;
+	}
+	.breadcrumb {
+		text-align: center;
+	}
+}
+
+.page-title.page-title-layout__left-right {
+	padding: 0;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 0;
+	}
+
+	@media (min-width: @screen-md-min) {
+		padding: 0;
+	}
+
+	.section-title-decoration {
+		padding: 16px 0;
+
+		@media (min-width: @screen-sm-min) {
+			padding: 24px 0;
+		}
+
+		@media (min-width: @screen-md-min) {
+			padding: 32px 0;
+		}
+	}
+
+	.section-title {
+		@media (min-width: @screen-md-min) {
+			text-align: left;
+			margin-bottom: 0;
+		}
+
+		@media (max-width: @screen-sm-max) {
+
+			&.section-title__lg {
+				text-align: center;
+			}
+		}
+	}
+	.breadcrumb {
+		padding-bottom: 0;
+
+		@media (min-width: @screen-md-min) {
+			text-align: right;
+			margin-bottom: 0;
+		}
+
+		> li {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.page-title.page-title-layout__right-left {
+	padding: 0;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 0;
+	}
+
+	@media (min-width: @screen-md-min) {
+		padding: 0;
+	}
+
+	.section-title-decoration {
+		padding: 16px 0;
+
+		@media (min-width: @screen-sm-min) {
+			padding: 24px 0;
+		}
+
+		@media (min-width: @screen-md-min) {
+			padding: 32px 0;
+		}
+	}
+
+	.section-title {
+		@media (min-width: @screen-md-min) {
+			text-align: right;
+			margin-bottom: 0;
+		}
+
+		@media (max-width: @screen-sm-max) {
+
+			&.section-title__lg {
+				text-align: center;
+			}
+		}
+	}
+	.breadcrumb {
+		padding-bottom: 0;
+
+		@media (min-width: @screen-md-min) {
+			text-align: left;
+			margin-bottom: 0;
+		}
+
+		> li {
+			padding-bottom: 0;
+		}
+	}
+}
+
+// Page Title Preset #1
+.page_title_preset_1 {
+
+}
+
+// Page Title Preset #2
+.page_title_preset_2 {
+
+}
+
+// Page Title Preset #3
+.page_title_preset_3 {
+
+	.section-title-inner {
+		border-bottom: 1px solid #fff;
+
+		&:before {
+			content:"";
+			height: 10px;
+			display: block;
+			position: absolute;
+			z-index: 2;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			#gradient > .vertical(transparent, rgba(0,0,0,0.05), 0%, 100%);
+		}
+	}
+}
+
+// Page Title Preset #4
+.page_title_preset_4 {
+
+	.section-title-inner {
+		border-bottom: 1px solid #fff;
+
+		&:before {
+			content:"";
+			height: 10px;
+			display: block;
+			position: absolute;
+			z-index: 2;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			#gradient > .vertical(transparent, rgba(0,0,0,0.05), 0%, 100%);
+		}
+	}
+}
+
+// Page Title Preset #5
+.page-title.page_title_preset_5 {
+
+	.section-title-decoration {
+		padding: 16px 0;
+
+		@media (min-width: @screen-sm-min) {
+			padding: 24px 0;
+		}
+
+		@media (min-width: @screen-md-min) {
+			padding: 32px 0 45px 0;
+		}
+	}
+}
+
+
+
+/* 7.2. Breadcrumbs */
+// -------------------------
+
+.breadcrumb {
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+  padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
+  margin-bottom: 5px;
+  background: @breadcrumb-bg;
+  border-radius: @border-radius-base;
+  font-family: @breadcrumb-font-family;
+
+  @media (min-width: @screen-sm-min) {
+  	margin-bottom: @line-height-computed;
+  }
+
+  > li {
+  	color: @breadcrumb-color;
+  	font-weight: 600;
+
+    + li:before {
+      content: "@{breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 8px;
+      color: @breadcrumb-separator-color;
+      font-size: 10px;
+      color: #d5d6d9;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      .fa-icon-before();
+    }
+
+    > a {
+    	display: inline-block;
+    	color: @breadcrumb-link-color;
+
+    	&:hover {
+    		color: @breadcrumb-link-color-hover;
+    	}
+    }
+  }
+
+  > .current {
+    color: @breadcrumb-active-color;
+  }
+}
+
+// Breadcrumbs Bordered
+.breadcrumbs-bordered {
+
+	.breadcrumb {
+
+		> li {
+
+			+ li:before {
+				display: none;
+			}
+
+			> a {
+				border: 1px solid @theme-color9;
+				padding: 4px 8px;
+				margin: 0 2px;
+
+				@media (min-width: @screen-sm-min) {
+					padding: 6px 10px;
+					margin: 0 3px;
+				}
+
+				@media (min-width: @screen-md-min) {
+					padding: 10px 18px;
+					margin: 0 4px;
+				}
+
+				&:hover,
+				&:active {
+					text-decoration: none;
+				}
+			}
+
+			&.current {
+
+				> span {
+					border: 1px solid @theme-color9;
+					padding: 4px 8px;
+					margin: 0 2px;
+
+					@media (min-width: @screen-sm-min) {
+						padding: 6px 10px;
+						margin: 0 4px;
+					}
+
+					@media (min-width: @screen-md-min) {
+						padding: 10px 18px;
+						margin: 0 4px;
+					}
+				}
+			}
+		}
+
+
+	}
+}

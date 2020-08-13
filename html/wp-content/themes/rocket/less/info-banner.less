@@ -1,0 +1,193 @@
+/*
+// 44. Info Banner
+// --------------------------------------------------
+*/
+
+.rocket_info-banner {
+	overflow: hidden;
+	position: relative;
+}
+	.rocket_info-banner-wrap {
+		padding: 20px;
+		min-height: 150px;
+		display: table;
+		width: 100%;
+		height: 100%;
+
+		@media (min-width:@screen-sm-min) {
+			padding: 30px;
+		}
+		@media (min-width:@screen-md-min) {
+			padding: 40px;
+		}
+		@media (min-width:@screen-lg-min) {
+			padding: 50px;
+		}
+	}
+	.rocket_info-banner-inner {
+		display: table-cell;
+		height: 100%;
+		width: 100%;
+		vertical-align: middle;
+		overflow: hidden;
+	}
+	.rocket_info-banner-link-full {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		z-index: 3;
+	}
+	.rocket_info-banner-overlay {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		z-index: 1;
+	}
+	.rocket_info-banner-title {
+		position: relative;
+		z-index: 3;
+		pointer-events: none;
+		font-size: 24px;
+		line-height: 1.5em;
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-size: bold;
+		font-family: @font-family-base;
+		color: @theme-color2;
+
+		@media (min-width:@screen-sm-min) {
+			font-size: 32px;
+		}
+		@media (min-width:@screen-md-min) {
+			font-size: 42px;
+		}
+		@media (min-width:@screen-lg-min) {
+			font-size: 46px;
+		}
+	}
+	.rocket_info-banner-subtitle {
+		position: relative;
+		z-index: 3;
+		pointer-events: none;
+		font-size: 12px;
+		line-height: 1.2em;
+		text-transform: uppercase;
+		font-weight: normal;
+		margin-bottom: 0;
+		color: @theme-color2;
+
+		@media (min-width:@screen-sm-min) {
+			font-size: 14px;
+		}
+		@media (min-width:@screen-md-min) {
+			font-size: 16px;
+		}
+	}
+	.rocket_info-banner-desc {
+		position: relative;
+		z-index: 3;
+		pointer-events: none;
+		margin-top: .75em;
+
+		@media (max-width:@screen-xs-max) {
+			display: none;
+		}
+	}
+	.rocket_info-banner-btn {
+		position: relative;
+		z-index: 3;
+		margin-top: 2em;
+
+		@media (max-width:@screen-xs-max) {
+			padding: 6px 18px;
+			font-size: 0.91em;
+		}
+	}
+
+	// Banner Image
+	.rocket_info-banner-img {
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		display: block;
+		border: 0;
+		box-shadow: none;
+		max-width: none;
+		width: auto !important;
+		float: none;
+		margin: 0 auto;
+		pointer-events: none;
+	}
+
+
+// Alignment 
+.rocket_info-align-left {
+	text-align: left;
+}
+.rocket_info-align-right {
+	text-align: right;
+}
+.rocket_info-align-center {
+	text-align: center;
+}
+
+.rocket_info-banner-img-top-left {
+	left: 0;
+	top: 0;
+}
+
+.rocket_info-banner-img-top-center {
+	left: 50%;
+	.translate(-50%;0);
+}
+
+.rocket_info-banner-img-top-right {
+	left: auto;
+	right: 0;
+}
+
+.rocket_info-banner-img-center-left {
+	left: 0;
+	top: 50%;
+	.translate(0;-50%);
+}
+
+.rocket_info-banner-img-center {
+	top: 50%;
+	left: 50%;
+	.translate(-50%;-50%);
+}
+
+.rocket_info-banner-img-center-right {
+	top: 50%;
+	.translate(0;-50%);
+	left: auto;
+	right: 0
+}
+
+.rocket_info-banner-img-bottom-left {
+	left: 0;
+}
+
+.rocket_info-banner-img-bottom-center,
+.rocket_info-banner-img-bottom-left,
+.rocket_info-banner-img-bottom-right {
+	top: auto;
+	bottom: 0
+}
+
+.rocket_info-banner-img-bottom-center {
+	left: 50%;
+	transform: translateX(-50%)
+}
+
+.rocket_info-banner-img-bottom-right {
+	right: 0;
+	left: auto
+}

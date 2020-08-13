@@ -1,0 +1,70 @@
+/*
+// 25. Magnific Popup
+// --------------------------------------------------
+*/
+
+/* Custom styles for MP
+// Default styles see here vendor/magnific-popup/magnific-popup.css */
+
+// Change background color
+.mfp-bg {
+	background: @theme-color2;
+	opacity:.7;
+}
+
+.mfp-figure {
+	
+	// Remove shadow
+	&:after {
+		.box-shadow(none);
+	}
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	padding: 0;
+	background: @theme-color1;
+	text-align: center;
+	top: 36px;
+	right: 0;
+	opacity:1;
+
+	&:hover {
+		background: lighten(@theme-color1, 3%);
+	}
+}
+
+img.mfp-img {
+	vertical-align: top;
+	padding-top: 36px;
+	padding-bottom: 36px;
+}
+.mfp-bottom-bar {
+	// background: @theme-color1;
+	padding: 32px 10px 32px 10px;
+	color: #fff;
+
+	.mfp-title {
+		text-transform: uppercase;
+		font-size: @font-size-large;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding-right: 0;
+		.text-overflow();
+
+		.btn {
+			position: absolute;
+			right: 15px;
+			top: 15px;
+			font-weight: 300;
+			padding-right: 70px;
+			padding-left: 25px;
+		}
+	}
+}
+.mfp-counter {
+	display: none;
+}

@@ -1,0 +1,231 @@
+@icon-box-bottom-margin: 30px;
+
+@margins-xs: 10px;
+@margins-sm: 15px;
+@margins-md: 25px;
+@margins-lg: 35px;
+@margins-xl: 45px;
+
+.rocket_icon_box {
+  font-size: @icon-element-font-size-base;
+  margin-bottom: @icon-box-bottom-margin;
+
+  &.rocket_icon_box-outer {
+    box-sizing: border-box;
+    text-align: center; // default align
+
+    //align styles
+    &.rocket_icon_box-align-left {
+      text-align: left;
+
+      .rocket_icon_box-inner {
+        float: left;
+        margin-left: 0 !important;
+        margin-bottom: 0 !important;
+      }
+    }
+    &.rocket_icon_box-align-center {
+      text-align: center;
+
+      .rocket_icon_box-inner {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    }
+    &.rocket_icon_box-align-right {
+      text-align: right;
+
+      .rocket_icon_box-inner {
+        float: right;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .rocket_icon_box-text {
+      padding-top: 20px;
+    }
+
+    &.rocket_icon_box-have-style {
+      .rocket_icon_box-text {
+        padding-top: 0;
+      }
+    }
+
+    .rocket_icon_box-inner {
+      line-height: 0;
+      text-align: center;
+      display: inline-block;
+      border: 3px solid transparent;
+      width: @icon-element-box-size-md; // default size md
+      height: @icon-element-box-size-md; //default size md
+      box-sizing: content-box; // helps for font-awesome centring on small sizes
+      position: relative;
+
+
+      .rocket_icon_box-icon {
+        font-size: @icon-element-icon-size-md; // default size md
+        // font awesome logic for all icons
+        font-style: normal;
+        line-height: 1 !important;
+        font-size-adjust: none;
+        font-stretch: normal;
+        -webkit-font-feature-settings: normal;
+        font-feature-settings: normal;
+        -webkit-font-language-override: normal;
+        font-language-override: normal;
+        -webkit-font-kerning: auto;
+        font-kerning: auto;
+        font-synthesis: weight style;
+        font-variant: normal;
+        text-rendering: auto;
+
+        display: inline-block;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        .translate(-50%, -50%);
+
+        &:before {
+          font-style: normal;
+          display: inline-block;
+          text-decoration: inherit;
+          width: inherit;
+          height: inherit;
+          font-size: 1em;
+          text-align: center;
+          text-rendering: optimizelegibility;
+        }
+
+      }
+
+      .rocket_icon_box-link, .vc_gitem-link {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        box-sizing: content-box;
+        border: none;
+      }
+
+      // size styles
+      .size-(@selector, @size, @font_size, @margins) {
+        &.rocket_icon_box-size-@{selector} {
+          // fix if no background style selected
+          &.rocket_icon_box-have-style-inner {
+            width: @size !important;
+            height: @size !important;
+          }
+          max-width: 100% !important;
+          line-height: @font_size !important;
+          margin: 0 @margins @margins/2 @margins;
+          .rocket_icon_box-icon {
+            font-size: @font_size !important;
+          }
+        }
+
+        &.rocket_icon_box-size-@{selector} {
+
+          @media (max-width: 991px) {
+            // fix if no background style selected
+            &.rocket_icon_box-have-style-inner {
+              width: 40px !important;
+              height: 40px !important;
+            }
+            line-height: 40px !important;
+            margin: 0 @margins/2 @margins/4 @margins/2;
+            .rocket_icon_box-icon {
+              font-size: 24px !important;
+            }
+
+            &.rocket_icon_box-style- {
+              width: 40px !important;
+            }
+          }
+
+          &.rocket_icon_box-style- {
+            margin-right: 10px !important;
+          }
+        }
+      }
+      .size-(~"xs", @icon-element-box-size-xs, @icon-element-icon-size-xs, @margins-xs);
+      .size-(~"sm", @icon-element-box-size-sm, @icon-element-icon-size-sm, @margins-sm);
+      .size-(~"md", @icon-element-box-size-md, @icon-element-icon-size-md, @margins-md);
+      .size-(~"lg", @icon-element-box-size-lg, @icon-element-icon-size-lg, @margins-lg);
+      .size-(~"xl", @icon-element-box-size-xl, @icon-element-icon-size-xl, @margins-xl);
+
+      // display styles
+      &.rocket_icon_box-style-boxed {
+      }
+
+      &.rocket_icon_box-style-boxed-outline {
+      }
+
+      &.rocket_icon_box-style-rounded,
+      &.rocket_icon_box-style-rounded-border {
+        border-radius: 50%;
+        .rocket_icon_box-link, .vc_gitem-link {
+          border-radius: 50%;
+        }
+      }
+      &.rocket_icon_box-style-rounded-outline {
+        border-radius: 50%;
+        .rocket_icon_box-link, .vc_gitem-link {
+          border-radius: 50%;
+        }
+      }
+      &.rocket_icon_box-style-rounded-less {
+        border-radius: @icon-element-rounded-radius;
+        .rocket_icon_box-link, .vc_gitem-link {
+          border-radius: @icon-element-rounded-radius;
+        }
+      }
+      &.rocket_icon_box-style-rounded-less-outline {
+        border-radius: @icon-element-rounded-radius;
+        .rocket_icon_box-link, .vc_gitem-link {
+          border-radius: @icon-element-rounded-radius;
+        }
+      }
+
+      .rocket_icon_box_colors_variants(@selector, @text_color) {
+        &.rocket_icon_box-color-@{selector} {
+          .rocket_icon_box-icon {
+            color: @text_color;
+          }
+        }
+      }
+      .rocket_icon_box_colors_variants(~'default', @white);
+      .rocket_icon_box_colors_variants(~'primary', @theme-color1);
+      .rocket_icon_box_colors_variants(~'secondary', @theme-color2);
+      .rocket_icon_box_colors_variants(~'tertiary', @theme-color3);
+      .rocket_icon_box_colors_variants(~'quaternary', @theme-color4);
+
+      // colors for styles
+      // Background Shape Colors
+      .rocket_icon_box_shape_color_variants(@selector, @color) {
+        &.rocket_icon_box-background-color-@{selector} {
+          &.rocket_icon_box-outline {
+            border-color: @color;
+          }
+          &.rocket_icon_box-background {
+            background-color: @color;
+            .box-shadow(0 0 0 2px rgba(0,0,0,.07));
+          }
+        }
+      }
+      .rocket_icon_box_shape_color_variants(~'primary', @theme-color1);
+      .rocket_icon_box_shape_color_variants(~'secondary', @theme-color2);
+      .rocket_icon_box_shape_color_variants(~'tertiary', @theme-color3);
+      .rocket_icon_box_shape_color_variants(~'quaternary', @theme-color4);
+
+    }
+  }
+
+  // icon box text area
+  .rocket_icon_box-text {
+    overflow: hidden;
+  }
+}

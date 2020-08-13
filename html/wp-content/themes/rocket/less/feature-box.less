@@ -1,0 +1,74 @@
+/*
+// 18. Feature Box
+// --------------------------------------------------
+*/
+
+.feature-box {
+	margin-bottom: 30px;
+
+	h5 {
+		margin-bottom: 1em;
+	}
+
+	.feature-icon {
+		margin-bottom: 20px;
+	}
+}
+	.feature-icon__simple {
+		font-size: 42px;
+		line-height: 1em;
+
+		&.icon-color1 {
+			color: @theme-color1;
+		}
+		&.icon-color2 {
+			color: @theme-color2;
+		}
+		&.icon-color3 {
+			color: @theme-color3;
+		}
+		&.icon-color4 {
+			color: @theme-color4;
+		}
+	}
+
+.feature-box__icon-left {
+	position: relative;
+
+	.feature-icon {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 5px;
+		width: 112px;
+		height: 112px;
+		line-height: 102px;
+	}
+	.feature-title {
+		margin-left: 140px;
+	}
+	.feature-desc {
+		margin-left: 140px;
+	}
+
+	h5 {
+		margin-bottom: .6em;
+	}
+}
+
+.feature-box__sm-icon-left {
+	position: relative;
+
+	.feature-icon {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 5px;
+	}
+	.feature-title {
+		margin-left: 70px;
+	}
+	.feature-desc {
+		margin-left: 70px;
+	}
+}

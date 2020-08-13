@@ -1,0 +1,470 @@
+/*
+// 26. Shop
+// --------------------------------------------------
+*/
+
+a.button,
+button.button,
+input.button {
+	&:extend(.btn);
+	cursor: pointer;
+	position: relative;
+	overflow: visible;
+	left: auto;
+	white-space: nowrap;
+	
+	&:not(.alt) {
+		&:extend(.btn-default);
+	}
+
+	&.loading {
+		opacity: 0.25;
+
+		&:after {
+			font-family: "WooCommerce";
+			content: "\e01c";
+			vertical-align: top;
+			-webkit-font-smoothing: antialiased;
+			font-weight: 400;
+			position: absolute;
+			top: .618em;
+			right: 1em;
+			.transition(spin 2s linear infinite);
+		}
+	}
+
+	&.added {
+		&:after {
+			font-family: 'WooCommerce';
+			content: "\e017";
+			margin-left: .53em;
+			vertical-align: bottom;
+		}
+	}
+
+	&.alt {
+		&:extend(.btn-primary);
+	}
+}
+
+.myaccount_user {
+	&:extend(.alert);
+	&:extend(.alert-info);
+
+	a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+
+    &:hover {
+    	text-decoration: none;
+    }
+  }
+}
+
+/* Shop Layout */
+// -------------------------
+.products ul,
+ul.products {
+	.clearfix();
+	clear: both;
+	padding: 0;
+	.list-unstyled();
+	padding-top: 40px;
+
+	li.product {
+		position: relative;
+		margin-bottom: 60px;
+		
+		&:before {
+			display: none;
+		}
+	}
+}
+
+
+
+
+/* Checkout */
+// -------------------------
+form.woocommerce-checkout {
+	&:extend(.box);
+}
+
+
+
+
+
+
+
+/* 26.1. Product Filter */
+// -------------------------
+
+.form-filter-products {
+
+	.form-group {
+		margin-bottom: 10px;
+
+		@media (min-width: @screen-md-min) {
+			margin-bottom: 0;
+		}
+	}
+
+	.label-inline {
+		display: inline-block;
+		float: left;
+		margin-right: 20px;
+		font-size: @font-size-large;
+		font-weight: bold;
+		padding-top: 10px;
+	}
+
+	.form-group__categories {
+
+		@media (min-width: @screen-md-min) {
+			padding-right: 15px;
+		}
+		
+	}
+	.form-group__currency {
+
+		@media (min-width: @screen-md-min) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		
+	}
+	.form-group__price {
+		
+		@media (min-width: @screen-md-min) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		.input-group {
+			
+			@media (min-width: @screen-md-min) {
+				float: right;
+			}
+		}
+		.form-control {
+			width: 50px;
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+		}
+		.input-group-addon {
+			width: 38px;
+			padding: 0;
+			line-height: 48px;
+			text-align: center;
+			border-left: none;
+		}
+	}
+	.form-group__sort {
+
+		@media (min-width: @screen-md-min) {
+			padding-left: 15px;
+		}
+
+		.form-control,
+		.btn-group {
+			
+			@media (min-width: @screen-md-min) {
+				float: right;
+				width: 160px;
+			}
+		}
+	}
+}
+
+
+/* 26.2. Product Card */
+// -------------------------
+
+.products-holder {
+	padding-top: 40px;
+}
+
+.product-item {
+	margin-bottom: 60px;
+}
+
+
+/* 26.3. Single Product */
+// -------------------------
+
+// Product Gallery
+
+.product-gallery {
+	width: 100%;
+	background: none;
+  .user-select(none);
+}
+.rsUni .rsThumb {
+
+}
+.rsUni .rsThumb.rsNavSelected img{
+	border-color: @theme-color1;
+}
+.rsUni img.rsImg.rsMainSlideImage {
+	border: 3px solid @thumbnail-border;
+}
+
+
+
+.product-heading {
+	padding-bottom: 20px;
+	border-bottom: 1px solid @hr-border;
+
+	.product-title {
+		font-size: @font-size-h3;
+		margin-bottom: .2em;
+	}
+	.product-company {
+
+	}
+}
+
+.review_num {
+	padding: 10px 0;
+
+	@media (min-width: @screen-md-min) {
+		text-align: right;
+		border-left: 1px dashed @hr-border;
+	}
+
+	.review_number {
+		font-weight: bold;
+		color: @theme-color1;
+		margin-right: .3em;
+	}
+}
+
+.product-info {
+	padding: 20px 0;
+
+	.product-price {
+		padding-bottom: 26px;
+	}
+
+	.price {
+		margin-bottom: 15px;
+
+		@media (min-width: @screen-sm-min) {
+			float: left;
+			margin-bottom: 0;
+		}
+
+		ins {
+			display: block;
+			font-size: @font-size-h2;
+			line-height: 1em;
+			text-decoration: none;
+			font-weight: 600;
+			font-family: @font-family-alt;
+			color: @theme-color2;
+		}
+		del {
+			display: block;
+			color: @theme-color1;
+			font-weight: 700;
+			font-size: @font-size-large;
+			font-family: @font-family-alt;
+		}
+	}
+
+	.currency {
+		float: right;
+		width: 140px;
+		margin-left: 20px;
+		padding-top: 7px;
+	}
+}
+
+.product-desc {
+	padding-bottom: 15px;
+	border-bottom: 1px dashed @hr-border;
+}
+
+.product-footer {
+	padding-top: 24px;
+}
+
+
+// Rating Control
+
+.rating-control {
+	text-transform: uppercase;
+	padding-right: 16px;
+
+	.rating-label {
+		float: left;
+		width: 50%;
+		.text-overflow();
+
+		@media (min-width: @screen-lg-min) {
+			width: 60%;
+		}
+	}
+}
+
+.rating-input {
+	float: right;
+	padding-left: 20px;
+	border-left: 1px dashed @input-border;
+
+	.fa {
+		padding: 0 1px;
+		font-size: 18px;
+	}
+	.fa-star {
+		color: @theme-color1;
+	}
+
+	.rating-clear {
+		display: none !important;
+	}
+}
+
+
+
+// Checkout
+
+.checkout-holder {
+	margin-bottom: 30px;
+}
+
+.table-checkout {
+
+	td {
+		vertical-align: middle !important;
+	}
+
+	.product-thumb {
+		margin: 0 0 10px 0;
+
+		@media (min-width: @screen-lg-min) {
+			float: left;
+			margin: 0 20px 0 0;
+		}
+	}
+
+	.product-name {
+		margin-bottom: 0;
+		font-size: 24px;
+	}
+	.product-desc-alt {
+		font-weight: 600;
+		line-height: 1.2em;
+		font-size: 16px;
+	}
+
+	.quantity {
+		float: none;
+	}
+
+	// Shipping Info Row
+
+	.shipping-info {
+
+		td {
+			background: @body-bg;
+			border-left: none;
+			border-right: none;
+		}
+	}
+
+	.shipping-label {
+		font-size: 24px;
+		font-weight: 600;
+		display: block;
+		margin-bottom: 10px;
+
+		@media (min-width: @screen-lg-min) {
+			float: left;
+			margin-right: 35px;
+			margin-bottom: 0;
+			padding-top: 4px;
+		}
+	}
+
+	.select-country-holder {
+		width: 100%;
+		margin-bottom: 20px;
+
+		@media (min-width: @screen-lg-min) {
+			width: 260px;
+			float: left;
+			margin-left: 26px;
+			margin-bottom: 0;
+		}
+	}
+
+	.select-provider-holder {
+		width: 100%;
+
+		@media (min-width: @screen-lg-min) {
+			width: 260px;
+			float: left;
+			margin-left: 26px;
+		}
+	}
+	
+
+	// Shipping Subtotal
+
+	.shipping-subtotal {
+
+		td {
+			border-left: none;
+			border-right: none;
+		}
+	}
+
+	.price-total {
+		display: inline-block;
+		font-size: 24px;
+		font-weight: 600;
+	}
+	
+
+	// Shipping Additinal Info
+
+	.shipping-additional-info {
+		
+		.well {
+			margin-bottom: 0;
+			font-size: @font-size-base;
+			color: @text-color;
+		}
+	}
+}
+
+
+// Payment and Delivery
+
+.payment-heading {
+	padding-bottom: 20px;
+
+	h5 {
+		padding-top: 12px;
+	}
+}
+
+.payment-footer {
+	background: @body-bg;
+	margin: 0 -30px -30px -30px;
+	padding: 20px 30px;
+	border-top: 1px solid @input-border;
+
+	.btn-confirm-holder {
+		overflow: hidden;
+		margin-right: 90px;
+	}
+
+	.btn-cancel {
+		float: right;
+		margin-left: 20px;
+	}
+}

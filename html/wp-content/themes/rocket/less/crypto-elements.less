@@ -1,0 +1,196 @@
+/*
+// Crypto Elements
+// --------------------------------------------------
+*/
+
+// Crypto Card
+.dfc-crypto-card {
+	display: block;
+	border: 2px solid #fff;
+	background-clip: content-box;
+	padding: 4px;
+	margin-bottom: 30px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+
+	.dfc-symbol {
+		font-size: 46px;
+		line-height: 1em;
+		font-weight: bold;
+		padding: 30px 0 5px 0;
+	}
+
+	.dfc-name {
+		font-size: 16px;
+		line-height: 1.2em;
+		font-family: @font-family-alt;
+	}
+
+	.dfc-rates {
+		padding: 28px 0 23px 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+
+		.dfc-rate {
+
+			.dfc-currency {
+				font-size: 14px;
+				line-height: 1.2em;
+				font-weight: bold;
+				padding-bottom: .1em;
+			}
+			.dfc-value {
+				font-family: @font-family-alt;
+				font-weight: 300;
+			}
+		}
+	}
+
+	// Colors
+
+	// Color: Primary
+	&.dfc-color-primary {
+		background-color: @theme-color1;
+	}
+
+	// Color: Secondary
+	&.dfc-color-secondary {
+		background-color: @theme-color2;
+	}
+
+	// Color: Tertiary
+	&.dfc-color-tertiary {
+		background-color: @theme-color3;
+	}
+
+	// Color: Quaternary
+	&.dfc-color-quaternary {
+		background-color: @theme-color4;
+	}
+}
+
+
+// Crypto Table
+.dfc-table {
+	
+	.fa-caret-up {
+		color: @brand-success;
+		margin-left: .3em;
+	}
+
+	.fa-caret-down {
+		color: @brand-danger;
+		margin-left: .3em;
+	}
+}
+
+
+// Token Sales
+.token-sale-counter {
+	background-color: @box-bg;
+}
+
+	.token-sale-counter__header {
+		padding: 40px 20px;
+		background-image: url("images/token-sale-bg.jpg");
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		position: relative;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-color: @theme-color1;
+			opacity: .96;
+		}
+	}
+		.token-sale-counter__title {
+			font-size: 28px;
+			line-height: 1.2em;
+			text-align: center;
+			font-weight: bold;
+			color: #fff;
+			position: relative;
+			text-align: center !important;
+		}
+
+		.token-sale-counter__countdown {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-evenly;
+			position: relative;
+			color: #fff;
+			font-weight: bold;
+			font-family: @font-family-alt;
+			text-transform: uppercase;
+		}
+			.token-sale-counter__countdown-item {
+				text-align: center;
+				min-width: 25%;
+				flex-basis: 25%;
+
+				.number {
+					font-size: 36px;
+					line-height: 1.2em;
+					padding-bottom: .1em;
+					display: block;
+				}
+
+				.desc {
+					font-size: 15px;
+					line-height: 1.2em;
+					display: block;
+				}
+			}
+
+	.token-sale-counter__progress {
+		padding: 30px 20px;
+
+		.progress {
+			margin-bottom: 0;
+		}
+	}
+		.token-sale-counter__subtitle {
+			font-size: 21px;
+			line-height: 1.2em;
+			margin-bottom: 1em;
+			font-weight: bold;
+			text-align: center !important;
+		}
+
+	.token-sale-counter__info {
+		background-color: @well-bg;
+		border-top: 1px solid @theme-color9;
+		border-bottom: 1px solid @theme-color9;
+		padding: 25px 40px;
+	}
+		.token-sale-counter__info-list {
+			font-size: 16px;
+			font-family: @font-family-alt;
+			font-weight: 300;
+			color: @theme-color2;
+			margin: 0;
+			padding: 0;
+		}
+			.token-sale-counter__info-list-item {
+				margin: 0;
+				padding: 0;
+
+				& + .token-sale-counter__info-list-item {
+					padding-top: 5px;
+				}
+			}
+
+	.token-sale-counter__footer {
+		padding: 20px;
+		text-align: center !important;
+	}

@@ -1,0 +1,73 @@
+<wpml-config>
+  <admin-texts>
+    <key name="rocket_data">
+      <key name="rocket_opt-header-top-bar-phone-number" />
+      <key name="rocket_opt-header-top-bar-email-address" />
+      <key name="rocket__opt-copyright-1" />
+      <key name="rocket__opt-copyright-2" />
+      <key name="rocket__opt-copyright-3" />
+      <key name="rocket__opt-blog-title" />
+      <key name="rocket__opt-blog-more-txt" />
+      <key name="rocket__opt-portfolio-breadcrumbs-name" />
+      <key name="rocket__opt-single-project-related-title" />
+      <key name="rocket__opt-team-breadcrumbs-name" />
+      <key name="rocket__opt-shop-breadcrumbs-name" />
+      <key name="rocket__opt-404-page-title-txt" />
+      <key name="rocket__opt-404-desc" />
+      <key name="rocket__opt-404-btn-txt" />
+      <key name="rocket__opt-404-social-title-txt" />
+      <key name="rocket__opt-coming-days-txt" />
+      <key name="rocket__opt-coming-hours-txt" />
+      <key name="rocket__opt-coming-mins-txt" />
+      <key name="rocket__opt-coming-secs-txt" />
+      <key name="rocket__opt-under-construction-days-txt" />
+      <key name="rocket__opt-under-construction-hours-txt" />
+      <key name="rocket__opt-under-construction-mins-txt" />
+      <key name="rocket__opt-under-construction-secs-txt" />
+    </key>
+  </admin-texts>
+  <custom-types>
+    <custom-type translate="1">portfolio</custom-type>
+    <custom-type translate="1">team</custom-type>
+    <custom-type translate="1">partners</custom-type>
+	</custom-types>
+  <custom-fields>
+    <custom-field action="copy">rocket_slider_type</custom-field>
+    <custom-field action="copy">rocket_slider</custom-field>
+    <custom-field action="copy">rocket_sidebar</custom-field>
+    <custom-field action="copy">rocket_title</custom-field>
+    <custom-field action="copy">rocket_top_bar</custom-field>
+    <custom-field action="copy">rocket_header_separator</custom-field>
+    <custom-field action="copy">rocket_footer_separator</custom-field>
+    <custom-field action="copy">rocket_partner_url</custom-field>
+    <custom-field action="copy">rocket_author</custom-field>
+    <custom-field action="copy">rocket_client</custom-field>
+    <custom-field action="copy">rocket_tools</custom-field>
+    <custom-field action="copy">rocket_project_url</custom-field>
+    <custom-field action="copy">rocket_position</custom-field>
+    <custom-field action="copy">rocket_excerpt</custom-field>
+    <custom-field action="copy">rocket_email</custom-field>
+    <custom-field action="copy">rocket_facebook</custom-field>
+    <custom-field action="copy">rocket_twitter</custom-field>
+    <custom-field action="copy">rocket_linkedin</custom-field>
+    <custom-field action="copy">rocket_gplus</custom-field>
+  </custom-fields>
+  <taxonomies>
+    <taxonomy translate="1">catportfolio</taxonomy>
+    <taxonomy translate="1">tagportfolio</taxonomy>
+    <taxonomy translate="1">groups</taxonomy>
+	</taxonomies>
+  <language-switcher-settings>
+   <key name="icl_language_switcher_sidebar">0</key>
+   <key name="icl_widget_title_show">0</key>
+   <key name="icl_lang_sel_type">dropdown</key>
+   <key name="icl_lso_link_empty">0</key>
+   <key name="icl_lso_flags">0</key>
+   <key name="icl_lso_native_lang">1</key>
+   <key name="icl_lso_display_lang">1</key>
+   <key name="icl_lang_sel_footer">0</key>
+   <key name="icl_post_availability">0</key>
+   <key name="icl_post_availability_position">below</key>
+   <key name="icl_post_availability_text">This post is also available in: %s</key>
+  </language-switcher-settings>
+</wpml-config>

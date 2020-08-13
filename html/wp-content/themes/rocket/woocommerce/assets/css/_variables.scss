@@ -1,0 +1,32 @@
+/**
+ * WooCommerce CSS Variables
+ */
+
+$woocommerce:   	#a46497;
+$green:         	#3fb539;
+$red:           	#d44546;
+$orange:        	#ffa76c;
+$blue:          	#2ea2cc;
+
+$primary:           #ff7149;                                    // Primary colour for buttons (alt)
+$primarytext:       desaturate(lighten($primary, 50%), 18%);    // Text on primary colour bg
+
+$secondary:         #4d306e;    // Secondary buttons
+$secondarytext:     desaturate(darken($secondary, 60%), 21%);   // Text on secondary colour bg
+
+$highlight:         $primary;                                   // Prices, In stock labels, sales flash
+$highlightext:      desaturate(lighten($highlight, 50%), 18%);  // Text on highlight colour bg
+
+$contentbg:         #fff;                                       // Content BG - Tabs (active state)
+$subtext:           #777;                                       // small, breadcrumbs etc
+
+$border-color:      #c8cbd0;
+$box-bg:            #e6e8ec;
+
+
+// custom vars
+$border:            #e3e5ea;
+$font-family:       'Open Sans', sans-serif;
+$font-family-alt:   'Exo 2', sans-serif;
+$textcolor:         #656269;
+$textcolor-alt:     #746981;

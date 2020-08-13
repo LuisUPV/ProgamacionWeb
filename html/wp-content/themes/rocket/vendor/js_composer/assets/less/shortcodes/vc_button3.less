@@ -1,0 +1,365 @@
+/* Button 3
+---------------------------------------------------------- */
+
+//========== Variables
+@vc_btn3-border-radius-round: 2em;
+@vc_btn3-border-radius-rounded: 5px;
+@vc_btn3-border-base: 1px;
+@vc_btn3-border-outline: 2px;
+@vc_btn3-shadow-width-xs-3d: 3px;
+@vc_btn3-shadow-width-sm-3d: 4px;
+@vc_btn3-shadow-width-md-3d: 5px;
+@vc_btn3-shadow-width-lg-3d: 5px;
+@vc_btn3-shadow-width-hover: 2px;
+
+@vc_btn3-color-initial: @vc_btn3-color-blue;
+
+// Button xs
+@vc_btn3-xs-padding-horizontal: 12px;
+@vc_btn3-xs-padding-vertical: 8px;
+@vc_btn3-xs-font-size: 11px;
+@vc_btn3-xs-icon-size: 14px;
+// Button sm
+@vc_btn3-sm-padding-horizontal: 16px;
+@vc_btn3-sm-padding-vertical: 11px;
+@vc_btn3-sm-font-size: 12px;
+@vc_btn3-sm-icon-size: 14px;
+// Button md (default)
+@vc_btn3-md-padding-horizontal: 20px;
+@vc_btn3-md-padding-vertical: 14px;
+@vc_btn3-md-font-size: 14px;
+@vc_btn3-md-icon-size: 16px;
+// Button lg
+@vc_btn3-lg-padding-horizontal: 25px;
+@vc_btn3-lg-padding-vertical: 18px;
+@vc_btn3-lg-font-size: 16px;
+@vc_btn3-lg-icon-size: 20px;
+
+//====== COLORS
+
+// color set
+// ---------------------------
+// blue
+@vc_btn3-color-blue: @blue;
+@vc_btn3-color-blue-gradient: lighten(@vc_btn3-color-blue, 7%);
+@vc_btn3-color-blue-gradient-end: lighten(@vc_btn3-color-blue, 2%);
+@vc_btn3-color-blue-text: @vc_btn3-color-blue;
+@vc_btn3-color-blue-contrast: #fff;
+// turquoise
+@vc_btn3-color-turquoise: @turquoise;
+@vc_btn3-color-turquoise-gradient: lighten(@vc_btn3-color-turquoise, 4%);
+@vc_btn3-color-turquoise-gradient-end: lighten(@vc_btn3-color-turquoise, 1%);
+@vc_btn3-color-turquoise-text: @vc_btn3-color-turquoise;
+@vc_btn3-color-turquoise-contrast: #fff;
+// pink
+@vc_btn3-color-pink: @pink;
+@vc_btn3-color-pink-gradient: lighten(@vc_btn3-color-pink, 4%);
+@vc_btn3-color-pink-gradient-end: lighten(@vc_btn3-color-pink, 1%);
+@vc_btn3-color-pink-text: @vc_btn3-color-pink;
+@vc_btn3-color-pink-contrast: #fff;
+// violet
+@vc_btn3-color-violet: @violet;
+@vc_btn3-color-violet-gradient: lighten(@vc_btn3-color-violet, 7%);
+@vc_btn3-color-violet-gradient-end: lighten(@vc_btn3-color-violet, 2%);
+@vc_btn3-color-violet-text: @vc_btn3-color-violet;
+@vc_btn3-color-violet-contrast: #fff;
+// peacoc
+@vc_btn3-color-peacoc: @peacoc;
+@vc_btn3-color-peacoc-gradient: lighten(@vc_btn3-color-peacoc, 9%);
+@vc_btn3-color-peacoc-gradient-end: lighten(@vc_btn3-color-peacoc, 2%);
+@vc_btn3-color-peacoc-text: @vc_btn3-color-peacoc;
+@vc_btn3-color-peacoc-contrast: #fff;
+// chino
+@vc_btn3-color-chino: @chino;
+@vc_btn3-color-chino-gradient: lighten(@vc_btn3-color-chino, 7%);
+@vc_btn3-color-chino-gradient-end: lighten(@vc_btn3-color-chino, 3%);
+@vc_btn3-color-chino-text: @vc_btn3-color-chino;
+@vc_btn3-color-chino-contrast: #fff;
+// mulled_wine
+@vc_btn3-color-mulled-wine: @mulled_wine;
+@vc_btn3-color-mulled-wine-gradient: lighten(@vc_btn3-color-mulled-wine, 8%);
+@vc_btn3-color-mulled-wine-gradient-end: lighten(@vc_btn3-color-mulled-wine, 3%);
+@vc_btn3-color-mulled-wine-text: @vc_btn3-color-mulled-wine;
+@vc_btn3-color-mulled-wine-contrast: #fff;
+// vista_blue
+@vc_btn3-color-vista-blue: @vista_blue;
+@vc_btn3-color-vista-blue-gradient: lighten(@vc_btn3-color-vista-blue, 7%);
+@vc_btn3-color-vista-blue-gradient-end: lighten(@vc_btn3-color-vista-blue, 3%);
+@vc_btn3-color-vista-blue-text: @vc_btn3-color-vista-blue;
+@vc_btn3-color-vista-blue-contrast: #fff;
+// orange
+@vc_btn3-color-orange: @orange;
+@vc_btn3-color-orange-gradient: lighten(@vc_btn3-color-orange, 6%);
+@vc_btn3-color-orange-gradient-end: lighten(@vc_btn3-color-orange, 1%);
+@vc_btn3-color-orange-text: @vc_btn3-color-orange;
+@vc_btn3-color-orange-contrast: #fff;
+// sky
+@vc_btn3-color-sky: @sky;
+@vc_btn3-color-sky-gradient: lighten(@vc_btn3-color-sky, 7%);
+@vc_btn3-color-sky-gradient-end: lighten(@vc_btn3-color-sky, 3%);
+@vc_btn3-color-sky-text: @vc_btn3-color-sky;
+@vc_btn3-color-sky-contrast: #fff;
+// green
+@vc_btn3-color-green: @green;
+@vc_btn3-color-green-gradient: lighten(@vc_btn3-color-green, 7%);
+@vc_btn3-color-green-gradient-end: lighten(@vc_btn3-color-green, 3%);
+@vc_btn3-color-green-text: @vc_btn3-color-green;
+@vc_btn3-color-green-contrast: #fff;
+// juicy_pink
+@vc_btn3-color-juicy-pink: @juicy_pink;
+@vc_btn3-color-juicy-pink-gradient: lighten(@vc_btn3-color-juicy-pink, 5%);
+@vc_btn3-color-juicy-pink-gradient-end: lighten(@vc_btn3-color-juicy-pink, 2%);
+@vc_btn3-color-juicy-pink-text: @vc_btn3-color-juicy-pink;
+@vc_btn3-color-juicy-pink-contrast: #fff;
+// sandy_brown
+@vc_btn3-color-sandy-brown: @sandy_brown;
+@vc_btn3-color-sandy-brown-gradient: lighten(@vc_btn3-color-sandy-brown, 6%);
+@vc_btn3-color-sandy-brown-gradient-end: lighten(@vc_btn3-color-sandy-brown, 3%);
+@vc_btn3-color-sandy-brown-text: @vc_btn3-color-sandy-brown;
+@vc_btn3-color-sandy-brown-contrast: #fff;
+// purple
+@vc_btn3-color-purple: @purple;
+@vc_btn3-color-purple-gradient: lighten(@vc_btn3-color-purple, 6%);
+@vc_btn3-color-purple-gradient-end: lighten(@vc_btn3-color-purple, 1%);
+@vc_btn3-color-purple-text: @vc_btn3-color-purple;
+@vc_btn3-color-purple-contrast: #fff;
+// black
+@vc_btn3-color-black: @black;
+@vc_btn3-color-black-gradient: lighten(@vc_btn3-color-black, 8%);
+@vc_btn3-color-black-gradient-end: lighten(@vc_btn3-color-black, 1%);
+@vc_btn3-color-black-text: @vc_btn3-color-black-contrast;
+@vc_btn3-color-black-contrast: #fff;
+// grey
+@vc_btn3-color-grey: @grey;
+@vc_btn3-color-grey-gradient: lighten(@vc_btn3-color-grey, 3%);
+@vc_btn3-color-grey-gradient-end: lighten(@vc_btn3-color-grey, 1%);
+@vc_btn3-color-grey-text: #666;
+@vc_btn3-color-grey-contrast: @vc_btn3-color-grey-text;
+// white
+@vc_btn3-color-white: @white;
+@vc_btn3-color-white-gradient: darken(@vc_btn3-color-white, 1%);
+@vc_btn3-color-white-gradient-end: darken(@vc_btn3-color-white, 2%);
+@vc_btn3-color-white-text: #666;
+@vc_btn3-color-white-contrast: @vc_btn3-color-white-text;
+
+// Custom colors
+// default
+@vc_btn3-color-default: @vc_btnBackground;
+@vc_btn3-color-default-gradient: @vc_btnBackground;
+@vc_btn3-color-default-gradient-end: @vc_btnBackgroundHighlight;
+@vc_btn3-color-default-text: @vc_btn3-color-default;
+@vc_btn3-color-default-contrast: @grayDark;
+// primary
+@vc_btn3-color-primary: @vc_btnPrimaryBackground;
+@vc_btn3-color-primary-gradient: lighten(@vc_btn3-color-primary, 7%);
+@vc_btn3-color-primary-gradient-end: lighten(@vc_btn3-color-primary, 2%);
+@vc_btn3-color-primary-text: @vc_btn3-color-primary;
+@vc_btn3-color-primary-contrast: @white;
+// info
+@vc_btn3-color-info: @vc_btnInfoBackground;
+@vc_btn3-color-info-gradient: lighten(@vc_btn3-color-info, 7%);
+@vc_btn3-color-info-gradient-end: lighten(@vc_btn3-color-info, 2%);
+@vc_btn3-color-info-text: @vc_btn3-color-info;
+@vc_btn3-color-info-contrast: @white;
+// Success
+@vc_btn3-color-success: @vc_btnSuccessBackground;
+@vc_btn3-color-success-gradient: lighten(@vc_btn3-color-success, 7%);
+@vc_btn3-color-success-gradient-end: lighten(@vc_btn3-color-success, 2%);
+@vc_btn3-color-success-text: @vc_btn3-color-success;
+@vc_btn3-color-success-contrast: #fff;
+// Warning
+@vc_btn3-color-warning: @vc_btnWarningBackground;
+@vc_btn3-color-warning-gradient: lighten(@vc_btn3-color-warning, 7%);
+@vc_btn3-color-warning-gradient-end: lighten(@vc_btn3-color-warning, 2%);
+@vc_btn3-color-warning-text: @vc_btn3-color-warning;
+@vc_btn3-color-warning-contrast: @white;
+// Danger
+@vc_btn3-color-danger: @vc_btnDangerBackground;
+@vc_btn3-color-danger-gradient: lighten(@vc_btn3-color-danger, 7%);
+@vc_btn3-color-danger-gradient-end: lighten(@vc_btn3-color-danger, 2%);
+@vc_btn3-color-danger-text: @vc_btn3-color-danger;
+@vc_btn3-color-danger-contrast: @white;
+// Inverse
+@vc_btn3-color-inverse: @vc_btnInverseBackground;
+@vc_btn3-color-inverse-gradient: lighten(@vc_btn3-color-inverse, 7%);
+@vc_btn3-color-inverse-gradient-end: lighten(@vc_btn3-color-inverse, 2%);
+@vc_btn3-color-inverse-text: @vc_btn3-color-inverse;
+@vc_btn3-color-inverse-contrast: @white;
+
+//========== VC Settings
+.vc_btn3-container {
+  display: block;
+  margin-bottom: @vc_margin_bottom_gold;
+  max-width: 100%;
+  &.vc_btn3-inline {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+//========== Positions
+.vc_btn3-container {
+  &.vc_btn3-center {
+    text-align: center;
+  }
+  &.vc_btn3-left {
+    text-align: left;
+  }
+  &.vc_btn3-right {
+    text-align: right;
+  }
+}
+
+//========== Shapes
+.vc_btn3 {
+  // Square Shape
+  &.vc_btn3-shape-square {
+    border-radius: 0;
+  }
+  // Rounded Shape
+  &.vc_btn3-shape-rounded {
+    border-radius: @vc_btn3-border-radius-rounded;
+  }
+  // Round Shape
+  &.vc_btn3-shape-round {
+    border-radius: @vc_btn3-border-radius-round;
+  }
+}
+
+// Icon sizes
+.make-btn3-icon-size(@padding-horizontal, @icon-size, @line-height) {
+  // indents and padding
+  .vc_btn3-icon {
+    font-size: @icon-size;
+    height: @line-height;
+    line-height: @line-height;
+  }
+  // left icon
+  &.vc_btn3-icon-left:not(.vc_btn3-o-empty) {
+    padding-left: ceil(@padding-horizontal * 2 + @icon-size / 2);
+    .vc_btn3-icon {
+      left: @padding-horizontal;
+    }
+  }
+  // right icon
+  &.vc_btn3-icon-right:not(.vc_btn3-o-empty) {
+    padding-right: ceil(@padding-horizontal * 2 + @icon-size / 2);
+    .vc_btn3-icon {
+      right: @padding-horizontal;
+    }
+  }
+}
+
+// Creating Colors
+.vc-make-btn3-color(@text; @background: false; @border: false; @color-hover: false; @background-hover: false; @border-hover: false; ) {
+  color: @text;
+  & when not (@border = false) {
+    border-color: @border;
+  }
+  & when not (@background = false) {
+    background-color: @background;
+  }
+
+  &:hover,
+  &:focus {
+    & when (@color-hover = false) {
+      color: darken(@text, 3%);
+    }
+    & when not (@color-hover = false) {
+      color: @color-hover;
+    }
+    & when not (@border = false) and (@border-hover = false) {
+      border-color: darken(@border, 6%);
+    }
+    & when not (@border-hover = false) {
+      border-color: @border-hover;
+    }
+    & when not (@background = false) and (@background-hover = false) {
+      background-color: darken(@background, 6%);
+    }
+    & when not (@background-hover = false) {
+      background-color: @background-hover;
+    }
+
+  }
+
+  &:active,
+  &.active {
+    & when (@color-hover = false) {
+      color: darken(@text, 5%);
+    }
+    & when not (@color-hover = false) {
+      color: @color-hover;
+    }
+    & when not (@border = false) and (@border-hover = false) {
+      border-color: darken(@border, 8%);
+    }
+    & when not (@border-hover = false) {
+      border-color: @border-hover;
+    }
+    & when not (@background = false) and (@background-hover = false) {
+      background-color: darken(@background, 8%);
+    }
+    & when not (@background-hover = false) {
+      background-color: @background-hover;
+    }
+
+  }
+}
+
+// make colors set
+.vc-btn3-make-colors-set(@selector; @text; @background; @gradient-end;  @gradient; @contrast-color) {
+  &.@{selector} {
+    // Flat (default)
+    &,
+    &.vc_btn3-style-flat {
+      .vc-make-btn3-color(@text: @contrast-color; @background: @background);
+    }
+    // Outline
+    &.vc_btn3-style-outline {
+      .vc-make-btn3-color(@text; @border: @background; @background: transparent; @color-hover: @contrast-color; @background-hover: @background; @border-hover: @background);
+    }
+    // 3d
+    &.vc_btn3-style-3d {
+      .vc-make-btn3-color(@text: @contrast-color; @background: @background; @background-hover: @background);
+
+      box-shadow: 0 @vc_btn3-shadow-width-md-3d 0 darken(@background, 11%);
+      &:hover,
+      &:focus {
+        top: @vc_btn3-shadow-width-md-3d - @vc_btn3-shadow-width-hover;
+        box-shadow: 0 @vc_btn3-shadow-width-hover 0 darken(@background, 11%);
+      }
+      // XS size
+      &.vc_btn3-size-xs {
+        box-shadow: 0 @vc_btn3-shadow-width-xs-3d 0 darken(@background, 11%);
+        &:hover,
+        &:focus {
+          top: @vc_btn3-shadow-width-xs-3d - @vc_btn3-shadow-width-hover;
+          box-shadow: 0 @vc_btn3-shadow-width-hover 0 darken(@background, 11%);
+        }
+      }
+      // SM size
+      &.vc_btn3-size-sm {
+        box-shadow: 0 @vc_btn3-shadow-width-sm-3d 0 darken(@background, 11%);
+        &:hover,
+        &:focus {
+          top: @vc_btn3-shadow-width-sm-3d - @vc_btn3-shadow-width-hover;
+          box-shadow: 0 @vc_btn3-shadow-width-hover 0 darken(@background, 11%);
+        }
+      }
+      // LG size
+      &.vc_btn3-size-lg {
+        box-shadow: 0 @vc_btn3-shadow-width-lg-3d 0 darken(@background, 11%);
+        &:hover,
+        &:focus {
+          top: @vc_btn3-shadow-width-lg-3d - @vc_btn3-shadow-width-hover;
+          box-shadow: 0 @vc_btn3-shadow-width-hover 0 darken(@background, 11%);
+        }
+      }
+    }
+    // Modern
+    &.vc_btn3-style-modern {
+      .vc-make-btn3-color(@text: @contrast-color; @background: @background; @border: @background);
+    }
+  }
+}

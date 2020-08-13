@@ -1,0 +1,118 @@
+/*
+// 22. Jumbotron
+// --------------------------------------------------
+*/
+
+.jumbotron {
+  padding: @jumbotron-padding;
+  margin-bottom: 0;
+  color: @jumbotron-color;
+  background-color: @jumbotron-bg;
+  position: relative;
+
+  h1,
+  .h1,
+  h2,
+  .h2 {
+    color: @jumbotron-heading-color;
+    text-transform: uppercase;
+  }
+
+  h1,
+  .h1 {
+  	font-weight: 700;
+  	font-family: @font-family-base;
+  	border-bottom: 1px dashed rgba(255,255,255,.33);
+  	position: relative;
+  	padding-bottom: 30px;
+  	padding-left: 6px;
+  	margin-bottom: .4em;
+
+  	&:before,
+  	&:after {
+  		content:"";
+  		display: block;
+  		position: absolute;
+  		border-radius: 50%;
+  	}
+  	&:before {
+  		width: 13px;
+  		height: 13px;
+  		background: rgba(255,255,255,.11);
+  		left: -7px;
+  		bottom: -7px;
+  	}
+  	&:after {
+  		width: 5px;
+  		height: 5px;
+  		background: @theme-color1;
+  		left: -3px;
+  		bottom: -3px;
+  	}
+  }
+
+  h2,
+  .h2 {
+  	font-weight: 300;
+  	padding-left: 16px;
+  	font-size: 24px;
+  }
+  
+  p {
+    margin-bottom: (@jumbotron-padding / 2);
+    font-size: @jumbotron-font-size;
+    font-weight: 200;
+  }
+
+  > hr {
+    border-top-color: darken(@jumbotron-bg, 10%);
+  }
+
+  .container &,
+  .container-fluid & {
+    border-radius: @border-radius-large;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: @screen-md-min) {
+    padding: (@jumbotron-padding * 1.6) 0;
+
+    .container &,
+    .container-fluid & {
+      padding-left:  (@jumbotron-padding * 2);
+      padding-right: (@jumbotron-padding * 2);
+    }
+
+    h1,
+    .h1 {
+      font-size: (@font-size-base * 5.4);
+      max-width: 86%;
+    }
+    h2,
+    .h2 {
+      font-size: (@font-size-base * 2.4);
+    }
+  }
+
+  &.jumbotron__custom-bg {
+  	background-image: url(../images/jumbotron-bg.jpg);
+  	background-position: 0 0;
+
+  	&:before {
+	  	content:"";
+	  	display: block;
+	  	position: absolute;
+	  	right: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	top: 0;
+	  	background-image: url(../images/jumbotron-rocket.png);
+	  	background-position: 100% 100%;
+	  	background-repeat: no-repeat;
+	  	background-size: contain;
+	  }
+  }
+}

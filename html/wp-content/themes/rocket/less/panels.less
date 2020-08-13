@@ -1,0 +1,369 @@
+/*
+// 8. Panels
+// --------------------------------------------------
+*/
+
+/* 8.1. Base class */
+// -------------------------
+ 
+.panel {
+  margin-bottom: @line-height-computed;
+  background-color: @panel-bg;
+  border: 1px solid @panel-inner-border;
+  border-radius: @panel-border-radius !important;
+  .box-shadow(none);
+}
+
+// Panel contents
+.panel-collapse {
+	.backface-visibility(hidden);
+}
+.panel-body {
+  padding: @panel-body-padding;
+}
+
+// Optional heading
+.panel-heading {
+  padding: 0;
+  border-bottom: 1px solid transparent;
+}
+
+.panel-title {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+
+  > a,
+  > small,
+  > .small,
+  > small > a,
+  > .small > a {
+    color: inherit;
+  }
+
+  > a {
+  	display: block;
+  	padding: @panel-heading-padding;
+
+  	&:hover {
+  		text-decoration: none;
+  	}
+  }
+}
+
+
+
+/* 8.2. Panels with Icons */
+// -------------------------
+
+.panel-group__with-icons {
+
+	.panel-heading {
+
+		.panel-title {
+
+			> a {
+				position: relative;
+				margin-left: 58px;
+				padding-right: 40px;
+
+				.fa {
+					background: @theme-color10;
+					display: block;
+					width: 58px;
+					height: 100%;
+					position: absolute;
+					left: -58px;
+					top: 0;
+					text-align: center;
+					line-height: 58px;
+					font-size: 21px;
+					color: @theme-color2;
+				}
+			}
+		}
+	}
+}
+
+// Icon for panels
+
+.panel-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	margin: -5px -22px 0 0;
+	width: 70px;
+	height: 70px;
+	border: 3px solid @theme-color11;
+	font-size: 0;
+	cursor: pointer;
+	border-radius: 50%;
+	.user-select(none);
+
+	&:before,
+	&:after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 3px;
+		height: 42px;
+		background: @theme-color11;
+		content: '';
+		.translate3d(-50%; -50%; 0);
+		transition: transform 300ms ease, translate 300ms ease, rotate 300ms ease;
+	}
+
+	&:after {
+		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(90deg);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(90deg);
+	}
+}
+
+
+
+/* 8.3. Panels color styling */
+// -------------------------
+
+.panel-default {
+  .panel-variant(@panel-default-border; @panel-default-text; @panel-default-heading-bg; @panel-default-border);
+}
+.panel-primary {
+  .panel-variant(@panel-primary-border; @panel-primary-text; @panel-primary-heading-bg; @panel-primary-border);
+}
+.panel-success {
+  .panel-variant(@panel-success-border; @panel-success-text; @panel-success-heading-bg; @panel-success-border);
+}
+.panel-info {
+  .panel-variant(@panel-info-border; @panel-info-text; @panel-info-heading-bg; @panel-info-border);
+}
+.panel-warning {
+  .panel-variant(@panel-warning-border; @panel-warning-text; @panel-warning-heading-bg; @panel-warning-border);
+}
+.panel-danger {
+  .panel-variant(@panel-danger-border; @panel-danger-text; @panel-danger-heading-bg; @panel-danger-border);
+}
+
+
+// Effect +/-
+.panel-icon__effect1 .panel-title [aria-expanded="false"] .panel-icon:before {
+	-webkit-animation: plusVertical 0.3s ease forwards;
+	animation: plusVertical 0.3s ease forwards;
+}
+
+.panel-icon__effect1 .panel-title [aria-expanded="false"] .panel-icon:after {
+	-webkit-animation: plusHorizontal 0.3s ease forwards;
+	animation: plusHorizontal 0.3s ease forwards;
+}
+
+.panel-icon__effect1 .panel-title [aria-expanded="true"] .panel-icon:before {
+	-webkit-animation: minusVertical 0.3s ease forwards;
+	animation: minusVertical 0.3s ease forwards;
+}
+
+.panel-icon__effect1 .panel-title [aria-expanded="true"] .panel-icon:after {
+	-webkit-animation: minusHorizontal 0.3s ease forwards;
+	animation: minusHorizontal 0.3s ease forwards;
+}
+
+@-webkit-keyframes plusVertical {
+	from { height: 0px; }
+	to { height: 42px; }
+}
+
+@keyframes plusVertical {
+	from { height: 0px; }
+	to { height: 42px; }
+}
+
+@-webkit-keyframes plusHorizontal {
+	50% { height: 56px; }
+}
+
+@keyframes plusHorizontal {
+	50% { height: 56px; }
+}
+
+@-webkit-keyframes minusVertical {
+	to { height: 0px; }
+}
+
+@keyframes minusVertical {
+	to { height: 0px; }
+}
+
+@-webkit-keyframes minusHorizontal {
+	50% { height: 56px; }
+}
+
+@keyframes minusHorizontal {
+	50% { height: 56px; }
+}
+
+
+// Effect "X"
+.panel-icon__effect2 .panel-title [aria-expanded="true"] .panel-icon:before {
+	-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(-225deg);
+	transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(-225deg);
+}
+
+.panel-icon__effect2 .panel-title [aria-expanded="true"] .panel-icon:after {
+	-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(225deg);
+	transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(225deg);
+}
+
+
+
+/* 8.4. Accordion (features) */
+// -------------------------
+
+.panel-group__features {
+	counter-reset: section; 
+
+	.panel {
+		border: none;
+		counter-increment: section;
+
+		.panel-heading {
+			border-bottom: 1px dashed @gray-lighter;
+
+			.panel-title {
+
+				> a {
+					padding: 50px 0;
+					position: relative;
+					display: block;
+					cursor: pointer !important;
+				}
+
+				// Number
+				.panel-title__number {
+					font-size: 22px;
+					line-height: 1.2em;
+					color: @theme-color11;
+					font-weight: 200;
+					font-family: @font-family-alt;
+					margin-bottom: 15px;
+
+					&:after {
+						content: counter(section, decimal-leading-zero);
+					}
+
+					@media (min-width: @screen-md-min) {
+						margin-bottom: 0;
+						font-size: 100px;
+						line-height: 1.1em;
+					}
+				}
+
+				// Heading
+				.panel-title__heading {
+
+					.v-center {
+
+						@media (max-width: @screen-xs-max) {
+							
+							&:before {
+								display: none;
+							}
+						}
+					}
+
+					.hgroup-panel {
+						margin-bottom: 15px;
+
+						@media (min-width: @screen-md-min) {
+							text-align: right;
+							margin-bottom: 0;
+						}
+
+						h3 {
+							padding: 0;
+							margin: 0 0 .2em 0;
+
+							@media (max-width: @screen-xs-max) {
+								font-size: 24px;
+							}
+
+							@media (min-width: @screen-sm-min) {
+								display: inline-block;
+							}
+						}
+						h5 {
+							margin: 0;
+							padding: 0;
+							font-weight: 600;
+
+							@media (min-width: @screen-sm-min) {
+								display: inline-block;
+							}
+						}
+					}
+				}
+
+				// Description
+				.panel-title__desc {
+					color: @text-color;
+					font-size: @font-size-base;
+				}
+
+				// Panel Icon
+				.panel-title__close {
+					position: static;
+
+					@media (min-width: @screen-md-min) {
+						position: relative;
+					}
+				}
+				.panel-icon {
+					margin: 0;
+					top: 33px;
+					right: -18px;
+					.scale(.5; .5);
+
+					&:before,
+					&:after {
+						.transition(.2s);
+					}
+
+					@media (min-width: @screen-md-min) {
+						top: 20px;
+						right: 1px;
+						margin: 0 15px 0 0;
+						.scale(1; 1);
+					}
+				}
+
+				// Circled Icon
+				.circled-icon {
+					.transition(.2s);
+
+					@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+						width: 70px;
+						height: 70px;
+						line-height: 64px;
+						font-size: 28px;
+						margin-top: -14px;
+					}
+				}
+				
+
+			}
+		}
+
+		&:hover {
+			
+			.panel-heading {
+				.panel-title {
+					.circled-icon {
+						.scale(1.1; 1.1);
+					}
+				}
+			}
+		}
+
+		.panel-body {
+			border: none !important;
+		}
+	}
+}

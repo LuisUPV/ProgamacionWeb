@@ -1,0 +1,99 @@
+/* Colors for TTA
+ * ========================== */
+
+// Primary Color
+// ------------------------
+.vc_tta-make-colors-set(~'vc_tta-color-primary';
+@color:             @vc_tta-color-primary;
+@background:        @vc_tta-color-primary-bg;
+@background-border: @vc_tta-color-primary-bg-border;
+@border:            @vc_tta-color-primary-border;
+@text:              @vc_tta-color-primary-text;
+@contrast:          @vc_tta-color-primary-contrast;
+@content:           @vc_tta-color-primary-content;
+@icon-color:        @vc_tta-color-primary-icon-color;
+@icon-color-active: @vc_tta-color-primary-icon-color-active;
+);
+
+// Secondary Color
+// ------------------------
+.vc_tta-make-colors-set(~'vc_tta-color-secondary';
+@color:             @vc_tta-color-secondary;
+@background:        @vc_tta-color-secondary-bg;
+@background-border: @vc_tta-color-secondary-bg-border;
+@border:            @vc_tta-color-secondary-border;
+@text:              @vc_tta-color-secondary-text;
+@contrast:          @vc_tta-color-secondary-contrast;
+@content:           @vc_tta-color-secondary-content;
+@icon-color:        @vc_tta-color-secondary-icon-color;
+@icon-color-active: @vc_tta-color-secondary-icon-color-active;
+);
+
+// Tertiary Color
+// ------------------------
+.vc_tta-make-colors-set(~'vc_tta-color-tertiary';
+@color:             @vc_tta-color-tertiary;
+@background:        @vc_tta-color-tertiary-bg;
+@background-border: @vc_tta-color-tertiary-bg-border;
+@border:            @vc_tta-color-tertiary-border;
+@text:              @vc_tta-color-tertiary-text;
+@contrast:          @vc_tta-color-tertiary-contrast;
+@content:           @vc_tta-color-tertiary-content;
+@icon-color:        @vc_tta-color-tertiary-icon-color;
+@icon-color-active: @vc_tta-color-tertiary-icon-color-active;
+);
+
+// Quaternary Color
+// ------------------------
+.vc_tta-make-colors-set(~'vc_tta-color-quaternary';
+@color:             @vc_tta-color-quaternary;
+@background:        @vc_tta-color-quaternary-bg;
+@background-border: @vc_tta-color-quaternary-bg-border;
+@border:            @vc_tta-color-quaternary-border;
+@text:              @vc_tta-color-quaternary-text;
+@contrast:          @vc_tta-color-quaternary-contrast;
+@content:           @vc_tta-color-quaternary-content;
+@icon-color:        @vc_tta-color-quaternary-icon-color;
+@icon-color-active: @vc_tta-color-quaternary-icon-color-active;
+);
+
+// Black Color
+// ------------------------
+.vc_tta-make-colors-set(~'vc_tta-color-black';
+@color:             @vc_tta-color-black;
+@background:        @vc_tta-color-black-bg;
+@background-border: @vc_tta-color-black-bg-border;
+@border:            @vc_tta-color-black-border;
+@text:              @vc_tta-color-black-text;
+@contrast:          @vc_tta-color-black-contrast;
+@content:           @vc_tta-color-black-content;
+@icon-color:        @vc_tta-color-black-icon-color;
+@icon-color-active: @vc_tta-color-black-icon-color-active;
+);
+
+// Grey Color
+// ------------------------
+.vc_tta-color-grey {
+  // Classic Style
+  // ------------------------
+  &.vc_tta-style-classic {
+    .vc_tta-make-panel-color(
+    @border: @vc_tta-common-border-color;
+    @border-active: @vc_tta-common-border-color;
+    @background: @vc_tta-common-background-color;
+    @background-active: @vc_tta-common-background-color;
+    @text: @vc_tta-color-grey-contrast;
+    @text-active: @vc_tta-color-grey-text;
+    @icon-color:        @vc_tta-color-grey-icon-color;
+    @icon-color-active: @vc_tta-color-grey-icon-color-active;
+    );
+    .vc_tta-make-tabs-color(
+    @border: @vc_tta-color-grey-border;
+    @border-active: @vc_tta-color-grey-bg-border;
+    @background: @vc_tta-color-grey;
+    @background-active: @vc_tta-color-grey-bg;
+    @text: @vc_tta-color-grey-contrast;
+    @text-active: @vc_tta-color-grey-text;
+    );
+  }
+}

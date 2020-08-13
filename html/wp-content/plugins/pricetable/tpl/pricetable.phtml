@@ -1,0 +1,49 @@
+<div class="pricetable clearfix">
+	<div class="pricetable-inner">
+
+		<?php foreach((array) $table as $i => $column) : ?>
+			<div class="<?php print implode(' ', $column['classes']) ?>" style="width:<?php print $column['width'] ?>%">
+				<div class="pricetable-column-inner">
+					<header class="pricetable-column-header">
+						<div class="pricetable-column-info">
+							<div class="meta">
+								<span class="number"><?php print $column['price'] ?></span>
+								<span class="desc"><?php print $column['detail'] ?></span>
+							</div>
+							<span class="currency"><?php print empty($column['currency']) ? '$' : $column['currency'] ?></span>
+							<?php print empty($column['img']) ? ' ' : '<img src="'.$column['img'].'" alt="" class="pricing-image">'; ?>
+							<?php print empty($column['status']) ? ' ' : '<span class="status" data-toggle="tooltip" data-placement="top" title="'.$column['status'].'"><i class="fa fa-circle-o"></i></span>'; ?>
+							<?php print empty($column['discount']) ? ' ' : '<span class="discount">'.$column['discount'].'</span>'; ?>
+							
+						</div>
+						<span class="pricetable-column-label">Hottest offer</span>
+						<h3 class="pricetable-column-title"><?php print $column['title'] ?></h3>
+					</header>
+					
+					<div class="pricetable-column-body">
+						<?php if(!empty($column['features'])) : ?>
+							<ul>
+							<?php foreach($column['features'] as $j => $feature) : ?>
+								<li>
+									<?php print $feature['title'] ?>
+									<?php if(!empty($feature['sub'])) : ?>
+										<small><?php print $feature['sub'] ?></small>
+									<?php endif; ?>
+								</li>
+							<?php endforeach ?>
+							</ul>
+						<?php endif; ?>
+					</div>
+					
+					<footer class="pricetable-column-footer">
+						<a href="<?php print empty($column['url']) ? '#' : $column['url'] ?>" class="btn btn-primary btn-block btn-has-icon icon-right">
+							<?php print empty($column['button']) ? __('Select', 'pricetable') : $column['button'] ?>
+							<i class="fa fa-arrow-circle-o-right"></i>
+						</a>
+					</footer>
+				</div>
+			</div>
+		<?php endforeach ?>
+
+	</div>
+</div>

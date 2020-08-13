@@ -1,0 +1,419 @@
+/*
+// 21. Owl Carousel
+// --------------------------------------------------
+*/
+
+/* 21.1. Base */
+// -------------------------
+.owl-carousel {
+	-webkit-transform: translate-z(0);
+	-ms-transform: translate-z(0);
+}
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-nav div{
+	color: #FFF;
+	display: inline-block;
+	margin: 5px;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-nav div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+	border-radius: 0;
+	padding: 0;
+	background: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-dot{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-dot span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #869791;
+}
+
+.owl-theme .owl-controls .owl-dot.active span,
+.owl-theme .owl-controls.clickable .owl-dot:hover span{
+	
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-dot span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url(../vendor/owl-carousel/AjaxLoader.gif) no-repeat center center;
+}
+
+
+/* 21.2. One Slide */
+// -------------------------
+
+.one-slide {
+	margin-bottom: 40px;
+}
+	.one-slide .item {
+
+	}
+		.owl-theme.one-slide .item img {
+			width: 100%;
+			height: auto;
+		}
+
+.one-slide .owl-controls {
+	margin-top: 0;
+}
+.one-slide .owl-controls .owl-nav div {
+	position: absolute;
+	margin: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.one-slide .owl-controls .owl-prev {
+	left: 0;
+}
+.one-slide .owl-controls .owl-next {
+	right: 0;
+}
+
+
+/* Owl Carousel holder */
+@media (min-width: @screen-md-min) {
+	.owl-holder {
+		width: @container-desktop;
+		margin: 0 -( @grid-gutter-width / 2) 0 -( @grid-gutter-width / 2);
+		overflow: hidden;
+	}
+}
+@media (min-width: @screen-lg-min) {
+	.owl-holder {
+		width: @container-large-desktop;
+		margin: 0 -( @grid-gutter-width / 2) 0 -( @grid-gutter-width / 2);
+		overflow: hidden;
+	}
+}
+
+.team-slider {
+	margin-bottom: 40px;
+}
+	.team-slider .item {
+		
+	}
+
+	@media (min-width: @screen-md-min) {
+		.team-slider .item {
+			padding: 0 (@grid-gutter-width / 2);
+		}
+	}
+
+
+/* 21.3. Logo Slider */
+// -------------------------
+
+.logo-slider {
+	margin-bottom: 30px;
+
+	&.hide_title {
+
+		.partner-name {
+			display: none;
+		}
+	}
+}
+
+.logo-slider .item {
+	padding: 0 20px;	
+}
+	.logo-slider .item img {
+		width: 100%;
+		height: auto;
+		opacity: .1;
+		.transition(.3s);
+
+		&:hover {
+			opacity:1;
+		}
+	}
+
+
+/* 21.4. Pricing Slider */
+// -------------------------
+
+.pricing-slider {
+
+	.item {
+		padding: 40px (@grid-gutter-width / 2) 0 (@grid-gutter-width / 2);
+	}
+}
+
+/* Testimonials Slider */
+.testi-slider {
+	margin-bottom: 24px;
+
+	.owl-controls {
+		position: relative;
+		height: 30px;
+
+		&:before {
+			content:"";
+			display: block;
+			position: absolute;
+			left: 30px;
+			top: 50%;
+			right: 30px;
+			border-top: 1px dashed #d5d3d2; 
+		}
+
+		// Prev & Next
+		.owl-nav {
+
+			div {
+				margin: 0;
+				position: absolute;
+				top: 0;
+			}
+
+			.owl-prev {
+				left: 0;
+			}
+
+			.owl-next {
+				right: 0;
+			}
+		}
+	}
+}
+
+
+/* 21.5. Vertical Slider */
+// -------------------------
+
+.vertical-slider {
+	margin-bottom: 30px;
+
+	.item {
+
+		.thumbnail {
+			margin: 0 1px 0 70px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.indent {
+			padding-left: 20px;
+		}
+	}
+
+	.owl-controls {
+		position: absolute;
+		left: -1px;
+		top: 0;
+		bottom: 0;
+		width: 71px;
+		overflow: hidden;
+		margin: 0;
+		background: @body-bg;
+
+		.owl-dots {
+			width: 19px;
+			position: absolute;
+			top: 50%;
+			.translate(0; -50%);
+
+			&:before {
+				content:"";
+				display: block;
+				width: 1px;
+				position: absolute;
+				top: 9px;
+				left: 9px;
+				bottom: 9px;
+				background: #dcd5cf;
+			}
+
+			.owl-dot {
+				width: 19px;
+				height: 19px;
+				margin: 0 auto 60px auto;
+
+				span {
+					vertical-align: middle;
+					line-height: 19px;
+					width: 11px;
+					height: 11px;
+					margin: 0 auto;
+					display: inline-block;
+					border: 2px solid #dcd5cf;
+					background: @body-bg;
+					position: relative;
+					.transition(.1s);
+
+					&:before {
+						content:"";
+						display: block;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						.translate(-50%;-50%);
+						width: 7px;
+						height: 7px;
+						border-radius: 50%;
+						.transition(.2s);
+					}
+				}
+
+				&.active span {
+					width: 19px;
+					height: 19px;
+					border-width: 1px;
+
+					&:before {
+						background: @theme-color1;
+					}
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			
+		}
+	}
+}
+
+
+/* 21.6. Custom Controls */
+// -------------------------
+
+.team-slider,
+.pricing-slider {
+
+	.owl-controls {
+		margin-top: 0;
+		position: relative;
+		width: 230px;
+		height: 30px;
+		margin: 30px auto 0 auto;
+
+		@media (min-width: @screen-md-min) {
+			margin-top: 80px;
+		}
+
+		&:before {
+			content:"";
+			display: block;
+			position: absolute;
+			left: 30px;
+			top: 50%;
+			right: 30px;
+			border-top: 1px dashed #cbc8c9; 
+		}
+
+		// Pagination
+		.owl-dots {
+			background: #f1f2f4;
+			border: 1px solid #cbc8c9;
+			height: 15px;
+			border-radius: 8px;
+			display: inline-block;
+			padding: 0 1px;
+			margin-top: 8px;
+			position: relative;
+		}
+
+		.owl-dot {
+
+			span {
+				display: inline-block;
+				vertical-align: top;
+				width: 7px;
+				height: 7px;
+				background: #d9d9e0;
+				border-radius: 50%;
+				margin: 3px 4px;
+			}
+		}
+
+		.owl-dot.active span,
+		&.clickable .owl-dot:hover span {
+			background: #ff7149;
+		}
+		
+
+		// Prev & Next
+		.owl-nav {
+
+			div {
+				margin: 0;
+				position: absolute;
+				top: 0;
+			}
+
+			.owl-prev {
+				left: 0;
+			}
+
+			.owl-next {
+				right: 0;
+			}
+		}
+	}
+}
+
+.pricing-slider {
+	
+	.owl-controls {
+
+		// Prev & Next
+		.owl-nav {
+
+			.owl-prev {
+				left: -32px;
+			}
+
+			.owl-next {
+				right: -32px;
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+// Use bootstrap mixin for transition
+.transition-all() {
+  .transition('all 0.3s ease-in-out');
+}
+
+// Condition select if @color is a color
+// This mixin will do nothing if @color is not a color (like false or etc)
+.if_color (@color, @property, @value) when (iscolor(@color)) {
+  @{property}: @value !important;
+}
+
+//Content
+.vc_grid {
+  &.vc_row {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.vc-row[data-vc-full-width] {
+  .vc_grid.vc_row {
+    overflow: hidden;
+  }
+}
+
+
+// basicGrid_GoTopSlideout
+.vc_gitem-animate-goTop20 .vc_gitem-zone-b {
+	background-color: @theme-color2-rgba-70;
+}
+.rocket__gitem_go_top_slideout {
+	background-color: @theme-color1;
+}
+
+// basicGrid_SlideBottomWithIcon
+.rocket__gitem_zone_b_slide_bottom_with_icon {
+	background-color: @theme-color2-rgba-70;
+}
+
+// basicGrid_VerticalFlip
+.rocket__gitem_zone_b_vertical_flip {
+	background-color: @theme-color2;
+}
+
+// basicGrid_NoAnimation
+.rocket__gitem_zone_b_no_animation {
+	background-color: @theme-color2-rgba-70;
+}
+
+// basicGrid_TextFirst
+.rocket__gitem_text_first {
+	background-color: @theme-color1;
+}
+
+// basicGrid_SlideFromLeft
+.rocket_gitem_slider_from_left {
+	background-color: @theme-color1;
+}
+
+// basicGrid_SlideFromTop
+.rocket_gitem_zone_b_slide_from_top {
+	background-color: @theme-color2;
+}
+
+// masonryGrid_IconSlideOut
+.rocket__gitem_zone_b_icon_slideout {
+	background-color: @theme-color2-rgba-70;
+}
+
+// masonryGrid_GoTop
+.rocket__gitem_zone_b_go_top {
+	background-color: @theme-color2;
+}
+
+// masonryGrid_OverlayWithRotation
+.rocket__gitem_zone_b_overlay_with_rotation {
+	background-color: @theme-color2-rgba-70;
+}
+
+// masonryGrid_BlurOut
+.rocket__gitem_zone_b_grid_blur_out {
+	background-color: @theme-color2-rgba-70;
+}
+
+// masonryGrid_ScaleWithRotation
+.rocket__gitem_zone_b_scale_with_rotation {
+	background-color: @theme-color2-rgba-70;
+}
+
+// masonryGrid_SlideoOutFromRight
+.rocket__gitem_slide_out_from_right {
+	background-color: @theme-color2-rgba-90;
+}
+
+@import "vc_grid_gap.less";
+@import "../../params/vc_grid_item/vc_grid_item.less";
+@import "vc_grid_style.less";
+@import "vc_grid_loading.less";
+// Import all other extensions
+@import "vc_grid_filter.less";
+@import "vc_grid_carousel.less";

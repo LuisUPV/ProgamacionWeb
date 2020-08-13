@@ -1,0 +1,346 @@
+/*
+// 4. Buttons
+// --------------------------------------------------
+*/
+
+
+/* 4.1. Base styles */
+// -------------------------
+
+.btn,
+.tagcloud > a,
+#respond input#submit,
+.woocommerce-pagination > ul > li > .page-numbers,
+.add_to_cart_button,
+.added_to_cart {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 0; // For input.btn
+	font-weight: @btn-font-weight;
+	text-align: center;
+  vertical-align: middle;
+	text-transform: uppercase;
+	touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+	font-family: @font-family-alt;
+	.button-size(@padding-base-vertical; 35px; 16px; @line-height-base; @border-radius-base);
+
+	&:hover,
+	&:focus,
+	&.focus {
+		color: @btn-default-color;
+		text-decoration: none;
+	}
+
+	&:active,
+	&.active {
+		.box-shadow(none);
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		border: none;
+	}
+
+	&.btn-has-icon {
+		position: relative;
+		padding-left: 85px;
+
+		.fa,
+		.btn-icon {
+			display: block;
+			position: absolute;
+			left: -1px;
+			top: -1px;
+			bottom: -1px;
+			background: rgba(0,0,0,.04);
+			width: 50px;
+			text-align: center;
+			line-height: inherit;
+			padding: @padding-base-vertical 0;
+		}
+
+		&.icon-right {
+			padding-right: 85px;
+			padding-left: 35px;
+
+			.fa,
+			.btn-icon {
+				left: auto;
+				right: -1px;
+			}
+		}
+
+		&.condensed {
+			padding-left: 70px;
+			padding-right: 20px;
+		}
+	}
+
+	&.btn-single-icon {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+}
+
+.btn-circle {
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: top;
+
+	.fa,
+	.btn-icon {
+		line-height: 22px;
+	}
+}
+
+
+
+/* 4.2. Alternate buttons */
+// -------------------------
+
+.btn-default,
+.tagcloud > a,
+.woocommerce-pagination > ul > li > .page-numbers {
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+  font-weight: 300;
+}
+.btn-primary,
+#respond input#submit,
+.woocommerce-pagination > ul > li > .page-numbers.current,
+.add_to_cart_button,
+.added_to_cart {
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+
+  &.btn-has-icon {
+  	.fa,
+  	.btn-icon {
+  		background: rgba(255,255,255,.1);
+  	}
+  }
+}
+// Secondary appears as green
+.btn-secondary {
+  .button-variant(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+}
+// Success appears as green
+.btn-success {
+  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+}
+// Info appears as blue-green
+.btn-info {
+  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+}
+// Warning appears as orange
+.btn-warning {
+  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+}
+// Danger and error appear as red
+.btn-danger {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+}
+
+
+
+/* 4.3. Link buttons */
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  color: @link-color;
+  font-weight: normal;
+  border-radius: 0;
+  color: @text-color;
+  text-transform: none;
+  font-family: @font-family-base;
+  font-size: 1em;
+
+  span {
+  	border-bottom: 1px dotted @text-color;
+  	display: inline-block;
+  }
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    .box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+    outline: none !important;
+  }
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: @btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+/* 4.4. Loading Button */
+// -------------------------
+
+.loading-btn {
+	position: relative;
+	padding-top: 32px;
+	margin-top: 15px;
+
+	.fa,
+	.btn-icon {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -12px;
+		font-size: 24px;
+		color: @theme-color1;
+	}
+
+	&.loading-btn__top-divider {
+		position: relative;
+		margin-top: 67px;
+
+		&:before {
+			content:"";
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: -57px;
+			height: 40px;
+			width: 1px;
+			margin-left: -1px;
+			border-left: 1px dashed @theme-color9;
+		}
+
+		&:after {
+			content:"";
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: -67px;
+			margin-left: -4px;
+			.square(7px);
+			background: @theme-color9;
+			border-radius: 50%;
+		}
+
+	}
+}
+
+
+
+/* 4.5. Button Sizes */
+// -------------------------
+
+.btn-lg {
+  .button-size(@padding-large-vertical; 45px; @font-size-large; @line-height-large; @border-radius-large);
+
+	&.btn-has-icon {
+		padding-left: 95px;
+
+		.fa,
+		.btn-icon {
+			width: 60px;
+			padding: (@padding-base-vertical + 10px) 0;
+		}
+
+		&.icon-right {
+			padding-right: 95px;
+			padding-left: 45px;
+		}
+	}
+
+	&.btn-single-icon {
+		padding-left: 23px;
+		padding-right: 23px;
+	}
+}
+.btn-sm {
+  .button-size(@padding-small-vertical; 20px; @font-size-small; @line-height-small; @border-radius-small);
+
+	&.btn-has-icon {
+		padding-left: 56px;
+
+		.fa,
+		.btn-icon {
+			width: 36px;
+			padding: (@padding-base-vertical - 3px) 0;
+		}
+
+		&.icon-right {
+			padding-right: 56px;
+			padding-left: 20px;
+		}
+	}
+
+	&.btn-single-icon {
+		padding-left: 13px;
+		padding-right: 13px;
+	}
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+
+	&.btn-has-icon {
+		padding-left: 40px;
+
+		.fa,
+		.btn-icon {
+			width: 28px;
+			padding: @padding-xs-vertical 0;
+		}
+
+		&.icon-right {
+			padding-right: 40px;
+			padding-left: @padding-xs-horizontal;
+		}
+	}
+
+	&.btn-single-icon {
+		padding-left: 13px;
+		padding-right: 13px;
+	}
+}
+
+.link-circle {
+	display: inline-block;
+	width: 29px;
+	height: 29px;
+	line-height: 27px;
+	border: 1px solid #dcd5cf;
+	text-align: center;
+	color: @theme-color8;
+	border-radius: 50%;
+	font-size: 18px;
+	.transition(.2s);
+
+	&:hover {
+		background: @theme-color1;
+		color: #fff;
+		border-color: @theme-color1;
+	}
+}

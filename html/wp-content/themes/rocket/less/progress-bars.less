@@ -1,0 +1,238 @@
+/*
+// 11. Progress Bars
+// --------------------------------------------------
+*/
+
+/* 11.1. Bar itself */
+// -------------------------
+
+// Outer container
+.progress {
+	height: 58px;
+	margin-bottom: 22px;
+	background-color: @progress-bg;
+	border-radius: @progress-border-radius;
+	.box-shadow(inset 0 0 2px @theme-color11);
+}
+
+// Bar of progress
+.progress-bar {
+	float: left;
+	width: 0%;
+	height: 100%;
+	font-size: @font-size-small;
+	line-height: 58px;
+	font-size: 21px;
+	color: @progress-bar-color;
+	text-align: left;
+	font-family: @font-family-alt;
+	font-weight: 600;
+	padding: 0 25px;
+	background-color: @progress-bar-bg;
+	.box-shadow(none);
+
+	.token-sale-counter & {
+		line-height: 58px !important;
+	}
+
+	.fa {
+		display: inline-block;
+		background: rgba(255,255,255,.1);
+		width: 58px;
+		height: 58px;
+		line-height: 58px;
+		text-align: center;
+		margin: -19px 20px 0 -25px;
+		position: relative;
+	}
+}
+
+// Striped bars size
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  background-size: 80px 80px;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from  { background-position: 80px 0; }
+  to    { background-position: 0 0; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripes {
+  from  { background-position: 80px 0; }
+  to    { background-position: 0 0; }
+}
+
+
+
+/* 11.2. Variations */
+// -------------------------
+
+.progress-bar-success {
+  .progress-bar-variant(@progress-bar-success-bg);
+
+  .current & + .progress-footer > h4 {
+		color: @progress-bar-success-bg !important;
+	}
+}
+
+.progress-bar-info {
+  .progress-bar-variant(@progress-bar-info-bg);
+
+	.current & + .progress-footer > h4 {
+		color: @progress-bar-info-bg !important;
+	}
+}
+
+.progress-bar-warning {
+  .progress-bar-variant(@progress-bar-warning-bg);
+
+  .current & + .progress-footer > h4 {
+		color: @progress-bar-warning-bg !important;
+	}
+}
+
+.progress-bar-danger {
+  .progress-bar-variant(@progress-bar-danger-bg);
+
+  .current & + .progress-footer > h4 {
+		color: @progress-bar-danger-bg !important;
+	}
+}
+
+.progress-bar-primary-alt,
+.progress-bar-primary-quinary {
+  .progress-bar-variant(@theme-color5);
+
+  .current & + .progress-footer > h4 {
+		color: @theme-color5 !important;
+	}
+}
+
+
+
+/* 11.3. Orientations */
+// -------------------------
+
+.progress__vertical {
+	height: 540px;
+	width: 100%;
+	position: relative;
+	background: none;
+	.box-shadow(none);
+
+	.progress-bar {
+		width: 100%;
+		padding: 0;
+		line-height: 1.2em;
+		float: none;
+		position: absolute;
+		bottom: 0;
+		height: 0;
+
+		.progress-icon {
+			display: block;
+			background: none;
+			position: absolute;
+			margin: 0;
+			left: 50%;
+			margin-left: -55px;
+			bottom: 80px;
+			width: 100%;
+			height: 300px;
+			line-height: 300px;
+			text-align: center;
+			color: rgba(255,255,255,.11);
+			font-size: 288px;
+
+			i {
+				background: none !important;
+			}
+		}
+	}
+	.progress-footer {
+		background: @progress-bg;
+		height: 62px;
+		width: 100%;
+		border-bottom: 1px dashed #d5d3d2;
+		border-top: 1px solid @theme-color13;
+		position: absolute;
+		bottom: 0;
+		padding: 25px 16px;
+		color: @theme-color11;
+		margin-bottom: 0;
+	}
+
+	.progress-label {
+		display: block;
+		background: rgba(255,255,255,.1);
+		padding: 18px;
+		color: #fff;
+	}
+
+	&.current {
+
+		.progress-footer {
+			background: @theme-color12;
+
+			> h4 {
+				color: @theme-color1;
+			}
+		}
+	}
+}
+
+
+
+/* 11.4. Condensed */
+// -------------------------
+
+.progress-holder {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 50px;
+	margin-top: -57px;
+
+	&:before {
+		content:"%";
+		display: block;
+		position: absolute;
+		top: -50px;
+		left: 50%;
+		.translate(-50%; 0);
+		font-size: 666px;
+		line-height: 1em;
+		font-weight: 200;
+		color: @theme-color13;
+	}
+}
+.progress-condensed .wpb_wrapper {
+	width: 100%;
+	display: table;
+
+	.progress {
+		display: table-cell;
+		width: 1%;
+		padding-left: 1px;
+
+		.progress-label {
+
+			@media (max-width:767px) {
+          display: block;
+          position: relative;
+          transform: rotate(-90deg) translate(-100%, 100%);
+          transform-origin: left top 0;
+          float: left;
+          left: 0;
+          bottom: 0;
+          white-space: nowrap;
+          margin-bottom: 0;
+          background: none;
+          padding-top: 0;
+          padding-bottom: 0;
+      }
+		}
+	}
+}

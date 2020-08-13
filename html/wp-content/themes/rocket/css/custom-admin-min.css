@@ -1,0 +1,10 @@
+#setting-error-tgmpa {
+  display: block;
+  clear: both; }
+
+/* Display color palletes images vertically */
+#rocket_data-rocket__preset-colors ul.redux-image-select li {
+  display: block !important; }
+
+#redux-header .rAds {
+  display: none !important; }

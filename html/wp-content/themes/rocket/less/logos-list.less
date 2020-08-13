@@ -1,0 +1,55 @@
+/*
+// 40. Logos List
+// --------------------------------------------------
+*/
+
+.logos-list {
+
+	[class^="col-"] {
+		padding-bottom: 14px;
+		display: inline-block;
+		margin-left: -2px;
+		margin-right: -2px;
+		float: none !important;
+	}
+
+	&.hide_title {
+
+		.partner-name {
+			display: none;
+		}
+	}
+}
+
+	.partner-link {
+		color: @text-color;
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-family: @font-family-alt;
+
+		img {
+			max-width: 100%;
+			height: auto;
+			.transition(.2s);
+			opacity: .18;
+			margin-bottom: 20px;
+		}
+
+		&:hover {
+			color: @theme-color1;
+			text-decoration: none;
+
+			img {
+				opacity:1;
+			}
+		}
+
+		.fa {
+			margin-right: 8px;
+			color: @theme-color1;
+		}
+	}
+	.partner-name {
+		display: block;
+	}

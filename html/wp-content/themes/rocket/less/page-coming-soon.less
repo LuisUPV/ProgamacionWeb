@@ -1,0 +1,48 @@
+/*
+// 35. Coming Soon
+// --------------------------------------------------
+*/
+
+.page-template-template-coming-soon {
+	background-color: @coming-soon-bg-color;
+	// background-image: url(images/bg1.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+	background-size: cover;
+	color: @coming-soon-txt-color;
+	position: relative;
+	padding: 40px 0;
+
+	@media (min-width: @screen-md-min) {
+		padding: 135px 0;
+	}
+}
+	.page-coming-soon-header {
+		text-align: center;
+
+		h1 {
+			font-size: 64px;
+			font-weight: 700;
+			color: @coming-soon-txt-color;
+			font-family: @font-family-base;
+			margin-bottom: 0;
+
+			@media (max-width: @screen-sm-max) {
+				font-size: 36px !important;
+			}
+		}
+	}
+	.page-coming-soon-footer {
+		position: relative;
+		padding: 18px 0 30px 0;
+		border-top: 1px dashed rgba(255,255,255,.33);
+
+		@media (min-width: @screen-md-min) {
+			padding: 48px 0 60px 0;
+		}
+
+		.footer-social-links {
+			padding-bottom: 0;
+		}
+	}

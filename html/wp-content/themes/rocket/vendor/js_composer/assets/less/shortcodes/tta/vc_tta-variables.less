@@ -1,0 +1,96 @@
+// Variables
+// ----------------------------------------------------------
+@vc_tta-font-size: 1em;
+@vc_tta-icon-font-size: 1.15em;
+@vc_tta-icon-spacing: 0;
+@vc_tta-border-size: 1px;
+@vc_tta-border-size-outline: 1px;
+@vc_tta-tabs-padding-vertical: 14px;
+@vc_tta-tabs-padding-horizontal: 30px;
+@vc_tta-panels-heading-font-size: @font-size-h5;
+@vc_tta-panels-padding-vertical: 20px;
+@vc_tta-panels-padding-horizontal: @vc_tta-tabs-padding-horizontal;
+@vc_tta-panes-padding-vertical: 30px;
+@vc_tta-panes-padding-horizontal: @vc_tta-tabs-padding-horizontal;
+@vc_tta-breakpoint: @grid-float-breakpoint;
+@vc_tta-breakpoint-max: (@vc_tta-breakpoint - 1);
+@vc_tta-border-radius-round: 2em;
+@vc_tta-border-radius-rounded: 5px;
+@vc_tta-pagination-gap: 30px;
+// Tabs sizes
+@vc_tta-controls-size-xs: 10%;
+@vc_tta-controls-size-sm: 20%;
+@vc_tta-controls-size-md: 30%;
+@vc_tta-controls-size-lg: 40%;
+@vc_tta-controls-size-xl: 50%;
+// z-index
+@vc_tta-tabs-z-index: 3;
+//
+@vc_tta-control-icon-width: 2px;
+@vc_tta-control-icon-size: 70px;
+@vc_tta-control-border-color: rgba(0,0,0,.1);
+
+@vc_tta-common-background-color: #f8f8f8;
+@vc_tta-common-border-color: #d2d2dd;
+
+//====== COLORS
+// primary
+@vc_tta-color-primary: @theme-color1; // unactive tab
+@vc_tta-color-primary-bg: @vc_tta-common-background-color; // active tab + content
+@vc_tta-color-primary-bg-border: @vc_tta-common-border-color; // tab pane border color + tab active border color
+@vc_tta-color-primary-border: @vc_tta-color-primary; // unactive border color (mobile)
+@vc_tta-color-primary-text: @text-color; // active tab text color (mobile)
+@vc_tta-color-primary-contrast: #fff; // unactive tab text color (mobile)
+@vc_tta-color-primary-content: #c9d2f0;
+@vc_tta-color-primary-icon-color: rgba(255,255,255,.5);
+@vc_tta-color-primary-icon-color-active: #c8cbd0;
+// secondary
+@vc_tta-color-secondary: @theme-color2; // unactive tab
+@vc_tta-color-secondary-bg: @vc_tta-common-background-color; // active tab + content
+@vc_tta-color-secondary-bg-border: @vc_tta-common-border-color; // tab pane border color + tab active border color
+@vc_tta-color-secondary-border: @vc_tta-color-secondary; // unactive border color (mobile)
+@vc_tta-color-secondary-text: @text-color; // active tab text color (mobile)
+@vc_tta-color-secondary-contrast: #fff; // unactive tab text color (mobile)
+@vc_tta-color-secondary-content: #c9d2f0;
+@vc_tta-color-secondary-icon-color: rgba(255,255,255,.5);
+@vc_tta-color-secondary-icon-color-active: #c8cbd0;
+// tertiary
+@vc_tta-color-tertiary: @theme-color3; // unactive tab
+@vc_tta-color-tertiary-bg: @vc_tta-common-background-color; // active tab + content
+@vc_tta-color-tertiary-bg-border: @vc_tta-common-border-color; // tab pane border color + tab active border color
+@vc_tta-color-tertiary-border: @vc_tta-color-tertiary; // unactive border color (mobile)
+@vc_tta-color-tertiary-text: @text-color; // active tab text color (mobile)
+@vc_tta-color-tertiary-contrast: #fff; // unactive tab text color (mobile)
+@vc_tta-color-tertiary-content: #c9d2f0;
+@vc_tta-color-tertiary-icon-color: rgba(255,255,255,.5);
+@vc_tta-color-tertiary-icon-color-active: #c8cbd0;
+// quaternary
+@vc_tta-color-quaternary: @theme-color4; // unactive tab
+@vc_tta-color-quaternary-bg: @vc_tta-common-background-color; // active tab + content
+@vc_tta-color-quaternary-bg-border: @vc_tta-common-border-color; // tab pane border color + tab active border color
+@vc_tta-color-quaternary-border: @vc_tta-color-quaternary; // unactive border color (mobile)
+@vc_tta-color-quaternary-text: @text-color; // active tab text color (mobile)
+@vc_tta-color-quaternary-contrast: #fff; // unactive tab text color (mobile)
+@vc_tta-color-quaternary-content: #c9d2f0;
+@vc_tta-color-quaternary-icon-color: rgba(255,255,255,.5);
+@vc_tta-color-quaternary-icon-color-active: #c8cbd0;
+// black
+@vc_tta-color-black: @black;
+@vc_tta-color-black-bg: @vc_tta-common-background-color;
+@vc_tta-color-black-bg-border: @vc_tta-common-border-color;
+@vc_tta-color-black-border: darken(@vc_tta-color-black, 3%);
+@vc_tta-color-black-text: @text-color;
+@vc_tta-color-black-contrast: #fff;
+@vc_tta-color-black-content: #d9d9d9;
+@vc_tta-color-black-icon-color: rgba(255,255,255,.5);
+@vc_tta-color-black-icon-color-active: #c8cbd0;
+// grey
+@vc_tta-color-grey: @grey;
+@vc_tta-color-grey-bg: #fff;
+@vc_tta-color-grey-bg-border: #fff;
+@vc_tta-color-grey-border: darken(@vc_tta-color-grey, 3%);
+@vc_tta-color-grey-text: @text-color;
+@vc_tta-color-grey-contrast: @text-color;
+@vc_tta-color-grey-content: #9d9d9e;
+@vc_tta-color-grey-icon-color: #c8cbd0;
+@vc_tta-color-grey-icon-color-active: #c8cbd0;
