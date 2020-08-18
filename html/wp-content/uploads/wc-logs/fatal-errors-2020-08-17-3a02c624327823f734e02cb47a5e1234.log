@@ -1,0 +1,117 @@
+2020-08-17T08:00:47+00:00 CRITICAL Uncaught Error: Call to a member function get_version() on null in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php:12
+Stack trace:
+#0 /var/www/html/wp-content/plugins/download-monitor/src/TemplateHandler.php(90): include()
+#1 /var/www/html/wp-content/plugins/download-monitor/src/Gutenberg.php(111): DLM_Template_Handler->get_template_part()
+#2 /var/www/html/wp-includes/class-wp-block-type.php(109): DLM_Gutenberg->render_download_button()
+#3 /var/www/html/wp-includes/blocks.php(487): WP_Block_Type->render()
+#4 /var/www/html/wp-includes/blocks.php(537): render_block()
+#5 /var/www/html/wp-includes/class-wp-hook.php(288): do_blocks()
+#6 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters()
+#7 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-revisions-controller.php(559): apply_filters()
+#8 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php(386): WP_REST_Revisions_Controller->prepare_item_for_response()
+#9 /var/www/html/wp-inc in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php on line 12
+
+2020-08-17T08:01:20+00:00 CRITICAL Uncaught Error: Call to a member function get_version() on null in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php:12
+Stack trace:
+#0 /var/www/html/wp-content/plugins/download-monitor/src/TemplateHandler.php(90): include()
+#1 /var/www/html/wp-content/plugins/download-monitor/src/Gutenberg.php(111): DLM_Template_Handler->get_template_part()
+#2 /var/www/html/wp-includes/class-wp-block-type.php(109): DLM_Gutenberg->render_download_button()
+#3 /var/www/html/wp-includes/blocks.php(487): WP_Block_Type->render()
+#4 /var/www/html/wp-includes/blocks.php(537): render_block()
+#5 /var/www/html/wp-includes/class-wp-hook.php(288): do_blocks()
+#6 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters()
+#7 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(1550): apply_filters()
+#8 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(758): WP_REST_Posts_Controller->prepare_item_for_response()
+#9 /var/www/html/wp-includes/rest- in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php on line 12
+
+2020-08-17T08:01:21+00:00 CRITICAL Uncaught Error: Call to a member function get_version() on null in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php:12
+Stack trace:
+#0 /var/www/html/wp-content/plugins/download-monitor/src/TemplateHandler.php(90): include()
+#1 /var/www/html/wp-content/plugins/download-monitor/src/Gutenberg.php(111): DLM_Template_Handler->get_template_part()
+#2 /var/www/html/wp-includes/class-wp-block-type.php(109): DLM_Gutenberg->render_download_button()
+#3 /var/www/html/wp-includes/blocks.php(487): WP_Block_Type->render()
+#4 /var/www/html/wp-includes/blocks.php(537): render_block()
+#5 /var/www/html/wp-includes/class-wp-hook.php(288): do_blocks()
+#6 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters()
+#7 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(1550): apply_filters()
+#8 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(472): WP_REST_Posts_Controller->prepare_item_for_response()
+#9 /var/www/html/wp-includes/rest- in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php on line 12
+
+2020-08-17T08:01:37+00:00 CRITICAL Uncaught Error: Call to a member function get_version() on null in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php:12
+Stack trace:
+#0 /var/www/html/wp-content/plugins/download-monitor/src/TemplateHandler.php(90): include()
+#1 /var/www/html/wp-content/plugins/download-monitor/src/Gutenberg.php(111): DLM_Template_Handler->get_template_part()
+#2 /var/www/html/wp-includes/class-wp-block-type.php(109): DLM_Gutenberg->render_download_button()
+#3 /var/www/html/wp-includes/blocks.php(487): WP_Block_Type->render()
+#4 /var/www/html/wp-includes/blocks.php(537): render_block()
+#5 /var/www/html/wp-includes/class-wp-hook.php(288): do_blocks()
+#6 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters()
+#7 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(1550): apply_filters()
+#8 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(472): WP_REST_Posts_Controller->prepare_item_for_response()
+#9 /var/www/html/wp-includes/rest- in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php on line 12
+
+2020-08-17T08:01:50+00:00 CRITICAL Uncaught Error: Call to a member function get_version() on null in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php:12
+Stack trace:
+#0 /var/www/html/wp-content/plugins/download-monitor/src/TemplateHandler.php(90): include()
+#1 /var/www/html/wp-content/plugins/download-monitor/src/Gutenberg.php(111): DLM_Template_Handler->get_template_part()
+#2 /var/www/html/wp-includes/class-wp-block-type.php(109): DLM_Gutenberg->render_download_button()
+#3 /var/www/html/wp-includes/blocks.php(487): WP_Block_Type->render()
+#4 /var/www/html/wp-includes/blocks.php(537): render_block()
+#5 /var/www/html/wp-includes/class-wp-hook.php(288): do_blocks()
+#6 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters()
+#7 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(1550): apply_filters()
+#8 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(472): WP_REST_Posts_Controller->prepare_item_for_response()
+#9 /var/www/html/wp-includes/rest- in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php on line 12
+
+2020-08-17T08:01:59+00:00 CRITICAL Uncaught Error: Call to a member function get_version() on null in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php:12
+Stack trace:
+#0 /var/www/html/wp-content/plugins/download-monitor/src/TemplateHandler.php(90): include()
+#1 /var/www/html/wp-content/plugins/download-monitor/src/Gutenberg.php(111): DLM_Template_Handler->get_template_part()
+#2 /var/www/html/wp-includes/class-wp-block-type.php(109): DLM_Gutenberg->render_download_button()
+#3 /var/www/html/wp-includes/blocks.php(487): WP_Block_Type->render()
+#4 /var/www/html/wp-includes/blocks.php(537): render_block()
+#5 /var/www/html/wp-includes/class-wp-hook.php(288): do_blocks()
+#6 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters()
+#7 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(1550): apply_filters()
+#8 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(472): WP_REST_Posts_Controller->prepare_item_for_response()
+#9 /var/www/html/wp-includes/rest- in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php on line 12
+
+2020-08-17T08:02:04+00:00 CRITICAL Uncaught Error: Call to a member function get_version() on null in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php:12
+Stack trace:
+#0 /var/www/html/wp-content/plugins/download-monitor/src/TemplateHandler.php(90): include()
+#1 /var/www/html/wp-content/plugins/download-monitor/src/Gutenberg.php(111): DLM_Template_Handler->get_template_part()
+#2 /var/www/html/wp-includes/class-wp-block-type.php(109): DLM_Gutenberg->render_download_button()
+#3 /var/www/html/wp-includes/blocks.php(487): WP_Block_Type->render()
+#4 /var/www/html/wp-includes/blocks.php(537): render_block()
+#5 /var/www/html/wp-includes/class-wp-hook.php(288): do_blocks()
+#6 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters()
+#7 /var/www/html/wp-includes/post-template.php(253): apply_filters()
+#8 /var/www/html/wp-content/themes/good-food/good-food/page.php(41): the_content()
+#9 /var/www/html/wp-includes/template-loader.php(161): include('/var/www/html/w...')
+#10 /var/www/html/wp-blog-header.php(19): requ in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php on line 12
+
+2020-08-17T08:02:16+00:00 CRITICAL Uncaught Error: Call to a member function get_version() on null in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php:12
+Stack trace:
+#0 /var/www/html/wp-content/plugins/download-monitor/src/TemplateHandler.php(90): include()
+#1 /var/www/html/wp-content/plugins/download-monitor/src/Gutenberg.php(111): DLM_Template_Handler->get_template_part()
+#2 /var/www/html/wp-includes/class-wp-block-type.php(109): DLM_Gutenberg->render_download_button()
+#3 /var/www/html/wp-includes/blocks.php(487): WP_Block_Type->render()
+#4 /var/www/html/wp-includes/blocks.php(537): render_block()
+#5 /var/www/html/wp-includes/class-wp-hook.php(288): do_blocks()
+#6 /var/www/html/wp-includes/plugin.php(206): WP_Hook->apply_filters()
+#7 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(1550): apply_filters()
+#8 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(472): WP_REST_Posts_Controller->prepare_item_for_response()
+#9 /var/www/html/wp-includes/rest- in /var/www/html/wp-content/plugins/download-monitor/templates/content-download.php on line 12
+
+2020-08-17T08:32:31+00:00 CRITICAL Uncaught Error: Call to undefined function WPDM\admin\menus\remote_get() in /var/www/html/wp-content/plugins/download-manager/admin/menus/class.Settings.php:307
+Stack trace:
+#0 /var/www/html/wp-content/plugins/download-manager/admin/tpls/settings.php(33): WPDM\admin\menus\Settings->pluginUpdate()
+#1 /var/www/html/wp-content/plugins/download-manager/admin/menus/class.Settings.php(41): include('/var/www/html/w...')
+#2 /var/www/html/wp-includes/class-wp-hook.php(288): WPDM\admin\menus\Settings->UI()
+#3 /var/www/html/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters()
+#4 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action()
+#5 /var/www/html/wp-admin/admin.php(254): do_action()
+#6 /var/www/html/wp-admin/edit.php(10): require_once('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/plugins/download-manager/admin/menus/class.Settings.php on line 307
+
